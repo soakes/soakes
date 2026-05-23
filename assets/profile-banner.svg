@@ -70,7 +70,7 @@
     <text x="0" y="96" class="title">Simon Oakes</text>
     <text x="3" y="136" class="subtitle">Senior Linux | DevOps | Platform Engineer</text>
     <rect x="3" y="165" width="540" height="3" rx="2" fill="url(#accent)" />
-    <text x="3" y="204" class="small">Automation-first infrastructure  |  BGP / RTBH  |  S3 tooling  |  Practical AI</text>
+    <text x="3" y="204" class="small">automation  |  network  |  security  |  build platforms  |  AI</text>
   </g>
 
   <g transform="translate(720 78)">

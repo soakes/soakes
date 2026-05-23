@@ -58,7 +58,6 @@
       .muted { fill: #94a3b8; }
       .pulse { animation: pulse 3.6s ease-in-out infinite; transform-origin: center; }
       .draw { stroke-dasharray: 10 12; animation: dash 7s linear infinite; }
-      .cursor { fill: #38bdf8; }
       @keyframes pulse { 0%, 100% { opacity: 0.52; } 50% { opacity: 1; } }
       @keyframes dash { to { stroke-dashoffset: -220; } }
     </style>
@@ -97,54 +96,27 @@
   <g clip-path="url(#type1)">
     <text x="92" y="113" class="terminal"><tspan class="prompt">soakes@macbook:~$</tspan><tspan class="cmd"> whoami</tspan></text>
   </g>
-  <rect class="cursor" x="92" y="96" width="10" height="22" rx="2" opacity="0">
-    <animate attributeName="x" from="92" to="375" dur="0.85s" begin="0.35s" fill="freeze" />
-    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.04;0.94;1" dur="0.85s" begin="0.35s" fill="freeze" />
-  </rect>
   <g clip-path="url(#type2)">
     <text x="92" y="146" class="terminal out">Senior Linux / DevOps / Platform Engineer</text>
   </g>
-  <rect class="cursor" x="92" y="129" width="10" height="22" rx="2" opacity="0">
-    <animate attributeName="x" from="92" to="556" dur="1.05s" begin="1.3s" fill="freeze" />
-    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.04;0.94;1" dur="1.05s" begin="1.3s" fill="freeze" />
-  </rect>
 
   <g clip-path="url(#type3)">
     <text x="92" y="192" class="terminal"><tspan class="prompt">soakes@macbook:~$</tspan><tspan class="cmd"> mission --brief</tspan></text>
   </g>
-  <rect class="cursor" x="92" y="175" width="10" height="22" rx="2" opacity="0">
-    <animate attributeName="x" from="92" to="506" dur="0.95s" begin="2.55s" fill="freeze" />
-    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.04;0.94;1" dur="0.95s" begin="2.55s" fill="freeze" />
-  </rect>
   <g clip-path="url(#type4)">
     <text x="92" y="225" class="terminal out">Turn complex infrastructure into repeatable, observable, recoverable platforms.</text>
   </g>
-  <rect class="cursor" x="92" y="208" width="10" height="22" rx="2" opacity="0">
-    <animate attributeName="x" from="92" to="1018" dur="1.55s" begin="3.65s" fill="freeze" />
-    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.04;0.94;1" dur="1.55s" begin="3.65s" fill="freeze" />
-  </rect>
 
   <g clip-path="url(#type5)">
     <text x="92" y="271" class="terminal"><tspan class="prompt">soakes@macbook:~$</tspan><tspan class="cmd"> interests --current</tspan></text>
   </g>
-  <rect class="cursor" x="92" y="254" width="10" height="22" rx="2" opacity="0">
-    <animate attributeName="x" from="92" to="550" dur="1s" begin="5.45s" fill="freeze" />
-    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.04;0.94;1" dur="1s" begin="5.45s" fill="freeze" />
-  </rect>
   <g clip-path="url(#type6)">
     <text x="92" y="304" class="terminal">
       <tspan class="blue">automation</tspan><tspan class="muted"> | </tspan>
-      <tspan class="green">network security</tspan><tspan class="muted"> | </tspan>
-      <tspan class="purple">object storage</tspan><tspan class="muted"> | </tspan>
+      <tspan class="green">network</tspan><tspan class="muted"> | </tspan>
+      <tspan class="purple">security</tspan><tspan class="muted"> | </tspan>
       <tspan class="orange">build platforms</tspan><tspan class="muted"> | </tspan>
-      <tspan class="green">practical AI</tspan>
+      <tspan class="green">AI</tspan>
     </text>
   </g>
-  <rect class="cursor" x="92" y="287" width="10" height="22" rx="2" opacity="0">
-    <animate attributeName="x" from="92" to="1030" dur="1.45s" begin="6.65s" fill="freeze" />
-    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.04;0.94;1" dur="1.45s" begin="6.65s" fill="freeze" />
-  </rect>
-  <rect class="cursor" x="1030" y="287" width="10" height="22" rx="2" opacity="0">
-    <animate attributeName="opacity" begin="8.1s" values="1;1;0;0" keyTimes="0;0.48;0.49;1" dur="0.9s" repeatCount="indefinite" />
-  </rect>
 </svg>
