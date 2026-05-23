@@ -3,17 +3,17 @@
   <desc id="desc">Retro terminal animation showing whoami, mission, and current interests for Simon Oakes.</desc>
   <defs>
     <radialGradient id="screenGlow" cx="50%" cy="42%" r="68%">
-      <stop offset="0" stop-color="#12351e" />
-      <stop offset="0.62" stop-color="#07130b" />
-      <stop offset="1" stop-color="#020403" />
+      <stop offset="0" stop-color="#102b1c" />
+      <stop offset="0.62" stop-color="#061109" />
+      <stop offset="1" stop-color="#010302" />
     </radialGradient>
     <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#bbf7d0" stop-opacity="0.08" />
-      <stop offset="0.4" stop-color="#22c55e" stop-opacity="0.02" />
-      <stop offset="1" stop-color="#000000" stop-opacity="0.22" />
+      <stop offset="0" stop-color="#d9f99d" stop-opacity="0.06" />
+      <stop offset="0.42" stop-color="#22c55e" stop-opacity="0.015" />
+      <stop offset="1" stop-color="#000000" stop-opacity="0.24" />
     </linearGradient>
     <pattern id="scanlines" width="4" height="4" patternUnits="userSpaceOnUse">
-      <rect width="4" height="1" fill="#bbf7d0" opacity="0.09" />
+      <rect width="4" height="1" fill="#bbf7d0" opacity="0.07" />
     </pattern>
     <filter id="textGlow" x="-20%" y="-40%" width="140%" height="180%">
       <feGaussianBlur stdDeviation="0.75" result="blur" />
@@ -35,55 +35,52 @@
 
     <style>
       .term { font: 500 18px ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; letter-spacing: 0; filter: url(#textGlow); }
-      .prompt { fill: #fbbf24; }
-      .cmd { fill: #dcfce7; }
-      .out { fill: #86efac; }
-      .muted { fill: #4ade80; opacity: 0.72; }
-      .header { font: 600 13px ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; fill: #86efac; opacity: 0.72; letter-spacing: 0; }
+      .prompt { fill: #f59e0b; }
+      .cmd { fill: #e2f8d8; }
+      .out { fill: #8fdca7; }
+      .muted { fill: #6ee7a8; opacity: 0.68; }
+      .header { font: 600 13px ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; fill: #8fdca7; opacity: 0.68; letter-spacing: 0; }
       .cursor { animation: blink 0.9s steps(1) infinite; }
       .flicker { animation: flicker 4.5s ease-in-out infinite; }
-      .sweep { animation: sweep 5.8s linear infinite; }
       .status { opacity: 0; animation: statusIn 0.4s ease-out 9.25s forwards; }
       @keyframes blink { 0%, 48% { opacity: 1; } 49%, 100% { opacity: 0; } }
       @keyframes flicker { 0%, 100% { opacity: 0.98; } 7% { opacity: 0.86; } 8% { opacity: 1; } 52% { opacity: 0.92; } 53% { opacity: 1; } }
-      @keyframes sweep { 0% { transform: translateY(-80px); opacity: 0; } 12% { opacity: 0.18; } 70% { opacity: 0.08; } 100% { transform: translateY(330px); opacity: 0; } }
       @keyframes statusIn { to { opacity: 1; } }
     </style>
   </defs>
 
-  <rect width="980" height="360" rx="28" fill="#050505" />
+  <rect width="980" height="360" rx="28" fill="#040604" />
   <g filter="url(#shellShadow)">
-    <rect x="24" y="24" width="932" height="312" rx="24" fill="#111827" />
-    <rect x="36" y="36" width="908" height="288" rx="20" fill="url(#screenGlow)" stroke="#1f3d2a" stroke-width="2" />
+    <rect x="24" y="24" width="932" height="312" rx="24" fill="#101510" />
+    <rect x="36" y="36" width="908" height="288" rx="20" fill="url(#screenGlow)" stroke="#24402e" stroke-width="2" />
   </g>
 
   <rect x="36" y="36" width="908" height="288" rx="20" fill="url(#scanlines)" />
   <rect class="flicker" x="36" y="36" width="908" height="288" rx="20" fill="url(#glass)" />
-  <rect class="sweep" x="38" y="46" width="904" height="44" fill="#bbf7d0" opacity="0.12" />
 
-  <path d="M58 58 H922" stroke="#4ade80" stroke-width="1" opacity="0.28" />
-  <text x="58" y="52" class="header">soakes-profile tty1  |  linux/devops/platform  |  secure session</text>
+  <path d="M58 58 H922" stroke="#7dd3a6" stroke-width="1" opacity="0.24" />
+  <text x="58" y="52" class="header">soakes-macbook tty1  |  linux/devops/platform  |  secure session</text>
   <text x="838" y="52" class="header">ONLINE</text>
-  <circle cx="908" cy="48" r="4" fill="#22c55e">
+  <circle cx="908" cy="48" r="4" fill="#7dd3a6">
     <animate attributeName="opacity" values="0.35;1;0.35" dur="2.4s" repeatCount="indefinite" />
   </circle>
 
   <g clip-path="url(#type1)">
-    <text x="58" y="94" class="term"><tspan class="prompt">soakes@profile:~$</tspan><tspan class="cmd"> whoami</tspan></text>
+    <text x="58" y="94" class="term"><tspan class="prompt">soakes@macbook:~$</tspan><tspan class="cmd"> whoami</tspan></text>
   </g>
   <g clip-path="url(#type2)">
     <text x="58" y="126" class="term out">Senior Linux / DevOps / Platform Engineer</text>
   </g>
 
   <g clip-path="url(#type3)">
-    <text x="58" y="172" class="term"><tspan class="prompt">soakes@profile:~$</tspan><tspan class="cmd"> mission --brief</tspan></text>
+    <text x="58" y="172" class="term"><tspan class="prompt">soakes@macbook:~$</tspan><tspan class="cmd"> mission --brief</tspan></text>
   </g>
   <g clip-path="url(#type4)">
     <text x="58" y="204" class="term out">Turn complex infrastructure into repeatable, observable, recoverable platforms.</text>
   </g>
 
   <g clip-path="url(#type5)">
-    <text x="58" y="250" class="term"><tspan class="prompt">soakes@profile:~$</tspan><tspan class="cmd"> interests --current</tspan></text>
+    <text x="58" y="250" class="term"><tspan class="prompt">soakes@macbook:~$</tspan><tspan class="cmd"> interests --current</tspan></text>
   </g>
   <g clip-path="url(#type6)">
     <text x="58" y="282" class="term out">automation | network security | object storage | build platforms | practical AI</text>
@@ -91,6 +88,6 @@
 
   <g class="status">
     <text x="58" y="308" class="term muted">status: production-minded, automation-first, calm under load</text>
-    <rect class="cursor" x="698" y="292" width="10" height="21" rx="2" fill="#bbf7d0" />
+    <rect class="cursor" x="730" y="292" width="10" height="21" rx="2" fill="#d9f99d" />
   </g>
 </svg>
