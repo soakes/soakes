@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&height=230&color=0:0ea5e9,45:7c3aed,100:f97316&text=Simon%20Oakes&fontAlign=50&fontAlignY=36&fontSize=58&fontColor=ffffff&desc=Senior%20Linux%20%7C%20DevOps%20%7C%20Platform%20Engineer&descSize=20&descAlign=50&descAlignY=58" alt="Simon Oakes profile banner" />
+<img src="./assets/profile-banner.svg" alt="Simon Oakes profile banner" />
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=2600&pause=800&color=38BDF8&center=true&vCenter=true&width=900&lines=Automation-first+infrastructure;Linux+%7C+DevOps+%7C+Platform+Engineering;BGP+%2F+RTBH+%2F+S3+tooling;Practical+AI+for+operations;Production+systems+that+stay+calm" alt="Animated headline: automation-first infrastructure, Linux DevOps platform engineering, BGP RTBH S3 tooling, practical AI for operations" />
 
