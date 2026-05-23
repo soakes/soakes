@@ -2,7 +2,7 @@
 
 <img src="./assets/profile-banner.svg" alt="Simon Oakes profile banner" />
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=2600&pause=800&color=38BDF8&center=true&vCenter=true&width=900&lines=Automation-first+infrastructure;Linux+%7C+DevOps+%7C+Platform+Engineering;BGP+%2F+RTBH+%2F+S3+tooling;Practical+AI+for+operations;Production+systems+that+stay+calm" alt="Animated headline: automation-first infrastructure, Linux DevOps platform engineering, BGP RTBH S3 tooling, practical AI for operations" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=2600&pause=800&color=38BDF8&center=true&vCenter=true&width=900&lines=Automation-first+infrastructure;Linux+%7C+DevOps+%7C+Platform+Engineering;automation+%7C+network+%7C+security+%7C+build+platforms+%7C+AI;Production+systems+that+stay+calm" alt="Animated headline: automation-first infrastructure, Linux DevOps platform engineering, automation, network, security, build platforms, and AI" />
 
 [![Linux](https://img.shields.io/badge/Linux-111827?style=for-the-badge&logo=linux&logoColor=white)](#)
 [![DevOps](https://img.shields.io/badge/DevOps-0f766e?style=for-the-badge&logo=gitlab&logoColor=white)](#)
