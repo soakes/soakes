@@ -1,99 +1,96 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 360" role="img" aria-labelledby="title desc">
-  <title id="title">Operator profile card</title>
-  <desc id="desc">Professional profile card showing role, mission, and current interests for Simon Oakes.</desc>
+  <title id="title">Good old terminal profile</title>
+  <desc id="desc">Retro terminal animation showing whoami, mission, and current interests for Simon Oakes.</desc>
   <defs>
-    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#020617" />
-      <stop offset="0.58" stop-color="#0f172a" />
-      <stop offset="1" stop-color="#111827" />
-    </linearGradient>
-    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#38bdf8" />
-      <stop offset="0.52" stop-color="#8b5cf6" />
-      <stop offset="1" stop-color="#f97316" />
-    </linearGradient>
-    <radialGradient id="glowBlue" cx="50%" cy="50%" r="50%">
-      <stop offset="0" stop-color="#38bdf8" stop-opacity="0.22" />
-      <stop offset="1" stop-color="#38bdf8" stop-opacity="0" />
+    <radialGradient id="screenGlow" cx="50%" cy="42%" r="68%">
+      <stop offset="0" stop-color="#12351e" />
+      <stop offset="0.62" stop-color="#07130b" />
+      <stop offset="1" stop-color="#020403" />
     </radialGradient>
-    <radialGradient id="glowOrange" cx="50%" cy="50%" r="50%">
-      <stop offset="0" stop-color="#f97316" stop-opacity="0.16" />
-      <stop offset="1" stop-color="#f97316" stop-opacity="0" />
-    </radialGradient>
-    <filter id="shadow" x="-10%" y="-12%" width="120%" height="130%">
-      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000000" flood-opacity="0.36" />
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#bbf7d0" stop-opacity="0.08" />
+      <stop offset="0.4" stop-color="#22c55e" stop-opacity="0.02" />
+      <stop offset="1" stop-color="#000000" stop-opacity="0.22" />
+    </linearGradient>
+    <pattern id="scanlines" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="1" fill="#bbf7d0" opacity="0.09" />
+    </pattern>
+    <filter id="textGlow" x="-20%" y="-40%" width="140%" height="180%">
+      <feGaussianBlur stdDeviation="0.75" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
     </filter>
+    <filter id="shellShadow" x="-10%" y="-12%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000000" flood-opacity="0.55" />
+    </filter>
+
+    <clipPath id="type1" clipPathUnits="userSpaceOnUse"><rect x="58" y="72" width="0" height="28"><animate attributeName="width" from="0" to="308" dur="0.9s" begin="0.4s" fill="freeze" /></rect></clipPath>
+    <clipPath id="type2" clipPathUnits="userSpaceOnUse"><rect x="58" y="104" width="0" height="28"><animate attributeName="width" from="0" to="492" dur="1.15s" begin="1.45s" fill="freeze" /></rect></clipPath>
+    <clipPath id="type3" clipPathUnits="userSpaceOnUse"><rect x="58" y="150" width="0" height="28"><animate attributeName="width" from="0" to="354" dur="0.95s" begin="2.85s" fill="freeze" /></rect></clipPath>
+    <clipPath id="type4" clipPathUnits="userSpaceOnUse"><rect x="58" y="182" width="0" height="28"><animate attributeName="width" from="0" to="858" dur="1.85s" begin="3.95s" fill="freeze" /></rect></clipPath>
+    <clipPath id="type5" clipPathUnits="userSpaceOnUse"><rect x="58" y="228" width="0" height="28"><animate attributeName="width" from="0" to="426" dur="1.05s" begin="6.05s" fill="freeze" /></rect></clipPath>
+    <clipPath id="type6" clipPathUnits="userSpaceOnUse"><rect x="58" y="260" width="0" height="28"><animate attributeName="width" from="0" to="842" dur="1.8s" begin="7.25s" fill="freeze" /></rect></clipPath>
+
     <style>
-      .eyebrow { font: 700 13px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #38bdf8; letter-spacing: 1.8px; }
-      .title { font: 800 30px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #f8fafc; letter-spacing: 0; }
-      .body { font: 500 18px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #cbd5e1; letter-spacing: 0; }
-      .label { font: 700 14px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #e2e8f0; letter-spacing: 0; }
-      .chip { font: 600 14px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #e5e7eb; letter-spacing: 0; }
-      .mono { font: 600 15px ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; fill: #94a3b8; letter-spacing: 0; }
-      .fade { opacity: 0; transform: translateY(10px); animation: fadeUp 0.7s ease-out forwards; }
-      .line { stroke-dasharray: 620; stroke-dashoffset: 620; animation: draw 1.2s ease-out forwards; }
-      .pulse { animation: pulse 3s ease-in-out infinite; transform-origin: center; }
-      .delay1 { animation-delay: 0.15s; }
-      .delay2 { animation-delay: 0.35s; }
-      .delay3 { animation-delay: 0.55s; }
-      .delay4 { animation-delay: 0.75s; }
-      .delay5 { animation-delay: 0.95s; }
-      @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
-      @keyframes draw { to { stroke-dashoffset: 0; } }
-      @keyframes pulse { 0%, 100% { opacity: 0.38; } 50% { opacity: 0.85; } }
+      .term { font: 500 18px ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; letter-spacing: 0; filter: url(#textGlow); }
+      .prompt { fill: #fbbf24; }
+      .cmd { fill: #dcfce7; }
+      .out { fill: #86efac; }
+      .muted { fill: #4ade80; opacity: 0.72; }
+      .header { font: 600 13px ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; fill: #86efac; opacity: 0.72; letter-spacing: 0; }
+      .cursor { animation: blink 0.9s steps(1) infinite; }
+      .flicker { animation: flicker 4.5s ease-in-out infinite; }
+      .sweep { animation: sweep 5.8s linear infinite; }
+      .status { opacity: 0; animation: statusIn 0.4s ease-out 9.25s forwards; }
+      @keyframes blink { 0%, 48% { opacity: 1; } 49%, 100% { opacity: 0; } }
+      @keyframes flicker { 0%, 100% { opacity: 0.98; } 7% { opacity: 0.86; } 8% { opacity: 1; } 52% { opacity: 0.92; } 53% { opacity: 1; } }
+      @keyframes sweep { 0% { transform: translateY(-80px); opacity: 0; } 12% { opacity: 0.18; } 70% { opacity: 0.08; } 100% { transform: translateY(330px); opacity: 0; } }
+      @keyframes statusIn { to { opacity: 1; } }
     </style>
   </defs>
 
-  <rect width="980" height="360" rx="30" fill="#020617" />
-  <circle cx="144" cy="64" r="210" fill="url(#glowBlue)" />
-  <circle cx="870" cy="322" r="240" fill="url(#glowOrange)" />
-
-  <g filter="url(#shadow)">
-    <rect x="28" y="28" width="924" height="304" rx="26" fill="url(#panel)" stroke="#334155" />
-    <rect x="28" y="28" width="924" height="4" rx="2" fill="url(#edge)" />
+  <rect width="980" height="360" rx="28" fill="#050505" />
+  <g filter="url(#shellShadow)">
+    <rect x="24" y="24" width="932" height="312" rx="24" fill="#111827" />
+    <rect x="36" y="36" width="908" height="288" rx="20" fill="url(#screenGlow)" stroke="#1f3d2a" stroke-width="2" />
   </g>
 
-  <path class="line" d="M76 246 C210 218 274 272 402 240 C544 204 626 202 762 232 C842 250 884 234 920 210" fill="none" stroke="url(#edge)" stroke-width="2" opacity="0.38" />
-  <circle class="pulse" cx="76" cy="246" r="4" fill="#38bdf8" />
-  <circle class="pulse" cx="402" cy="240" r="4" fill="#8b5cf6" />
-  <circle class="pulse" cx="762" cy="232" r="4" fill="#f97316" />
+  <rect x="36" y="36" width="908" height="288" rx="20" fill="url(#scanlines)" />
+  <rect class="flicker" x="36" y="36" width="908" height="288" rx="20" fill="url(#glass)" />
+  <rect class="sweep" x="38" y="46" width="904" height="44" fill="#bbf7d0" opacity="0.12" />
 
-  <g class="fade delay1">
-    <text x="74" y="78" class="eyebrow">OPERATOR PROFILE</text>
-    <text x="74" y="122" class="title">Senior Linux / DevOps / Platform Engineer</text>
+  <path d="M58 58 H922" stroke="#4ade80" stroke-width="1" opacity="0.28" />
+  <text x="58" y="52" class="header">soakes-profile tty1  |  linux/devops/platform  |  secure session</text>
+  <text x="838" y="52" class="header">ONLINE</text>
+  <circle cx="908" cy="48" r="4" fill="#22c55e">
+    <animate attributeName="opacity" values="0.35;1;0.35" dur="2.4s" repeatCount="indefinite" />
+  </circle>
+
+  <g clip-path="url(#type1)">
+    <text x="58" y="94" class="term"><tspan class="prompt">soakes@profile:~$</tspan><tspan class="cmd"> whoami</tspan></text>
+  </g>
+  <g clip-path="url(#type2)">
+    <text x="58" y="126" class="term out">Senior Linux / DevOps / Platform Engineer</text>
   </g>
 
-  <g class="fade delay2">
-    <rect x="74" y="154" width="832" height="70" rx="18" fill="#0f172a" stroke="#1e293b" />
-    <text x="96" y="183" class="label">Mission</text>
-    <text x="96" y="208" class="body">Turn complex infrastructure into repeatable, observable, recoverable platforms.</text>
+  <g clip-path="url(#type3)">
+    <text x="58" y="172" class="term"><tspan class="prompt">soakes@profile:~$</tspan><tspan class="cmd"> mission --brief</tspan></text>
+  </g>
+  <g clip-path="url(#type4)">
+    <text x="58" y="204" class="term out">Turn complex infrastructure into repeatable, observable, recoverable platforms.</text>
   </g>
 
-  <g class="fade delay3">
-    <rect x="74" y="252" width="126" height="32" rx="16" fill="#082f49" stroke="#075985" />
-    <text x="94" y="273" class="chip">automation</text>
-
-    <rect x="214" y="252" width="168" height="32" rx="16" fill="#1e1b4b" stroke="#4c1d95" />
-    <text x="234" y="273" class="chip">network security</text>
-
-    <rect x="396" y="252" width="146" height="32" rx="16" fill="#132f1f" stroke="#166534" />
-    <text x="416" y="273" class="chip">object storage</text>
-
-    <rect x="556" y="252" width="146" height="32" rx="16" fill="#2e1065" stroke="#6d28d9" />
-    <text x="576" y="273" class="chip">build platforms</text>
-
-    <rect x="716" y="252" width="130" height="32" rx="16" fill="#431407" stroke="#c2410c" />
-    <text x="736" y="273" class="chip">practical AI</text>
+  <g clip-path="url(#type5)">
+    <text x="58" y="250" class="term"><tspan class="prompt">soakes@profile:~$</tspan><tspan class="cmd"> interests --current</tspan></text>
+  </g>
+  <g clip-path="url(#type6)">
+    <text x="58" y="282" class="term out">automation | network security | object storage | build platforms | practical AI</text>
   </g>
 
-  <g class="fade delay4">
-    <text x="74" y="306" class="mono">$ whoami</text>
-    <text x="184" y="306" class="mono">profile.ready=true</text>
-  </g>
-
-  <g class="fade delay5">
-    <rect x="748" y="70" width="156" height="34" rx="17" fill="#052e2b" stroke="#0f766e" />
-    <circle cx="773" cy="87" r="5" fill="#34d399" />
-    <text x="790" y="92" class="chip">production-minded</text>
+  <g class="status">
+    <text x="58" y="308" class="term muted">status: production-minded, automation-first, calm under load</text>
+    <rect class="cursor" x="698" y="292" width="10" height="21" rx="2" fill="#bbf7d0" />
   </g>
 </svg>
