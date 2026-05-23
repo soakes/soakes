@@ -35,16 +35,11 @@ These days I am especially interested in the layer between operations and softwa
 
 I am also actively exploring practical AI in operations: not hype for its own sake, but useful automation, summarisation, reporting, developer support, and internal tools that help engineers understand systems faster and make better decisions.
 
-```console
-$ whoami
-Senior Linux / DevOps / Platform Engineer
+<div align="center">
 
-$ mission
-Turn complex infrastructure into repeatable, observable, recoverable platforms.
+<img src="./assets/operator-terminal.svg" alt="Animated operator terminal showing whoami, mission, and current interests" />
 
-$ current_interests
-automation, network security, object storage, build platforms, practical AI
-```
+</div>
 
 ## What I Bring
 

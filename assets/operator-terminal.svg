@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 330" role="img" aria-labelledby="title desc">
+  <title id="title">Animated operator terminal</title>
+  <desc id="desc">Terminal-style card showing whoami, mission, and current interests for Simon Oakes.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#020617" />
+      <stop offset="0.5" stop-color="#0f172a" />
+      <stop offset="1" stop-color="#111827" />
+    </linearGradient>
+    <linearGradient id="border" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38bdf8" />
+      <stop offset="0.5" stop-color="#8b5cf6" />
+      <stop offset="1" stop-color="#f97316" />
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#38bdf8" stop-opacity="0.28" />
+      <stop offset="1" stop-color="#38bdf8" stop-opacity="0" />
+    </radialGradient>
+    <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse">
+      <path d="M 34 0 L 0 0 0 34" fill="none" stroke="#94a3b8" stroke-width="0.6" opacity="0.12" />
+    </pattern>
+    <clipPath id="line1" clipPathUnits="userSpaceOnUse"><rect x="70" y="92" width="0" height="28"><animate attributeName="width" from="0" to="220" dur="0.7s" begin="0.3s" fill="freeze" /></rect></clipPath>
+    <clipPath id="line2" clipPathUnits="userSpaceOnUse"><rect x="70" y="122" width="0" height="28"><animate attributeName="width" from="0" to="520" dur="1.1s" begin="1.1s" fill="freeze" /></rect></clipPath>
+    <clipPath id="line3" clipPathUnits="userSpaceOnUse"><rect x="70" y="164" width="0" height="28"><animate attributeName="width" from="0" to="220" dur="0.8s" begin="2.4s" fill="freeze" /></rect></clipPath>
+    <clipPath id="line4" clipPathUnits="userSpaceOnUse"><rect x="70" y="194" width="0" height="28"><animate attributeName="width" from="0" to="820" dur="1.6s" begin="3.3s" fill="freeze" /></rect></clipPath>
+    <clipPath id="line5" clipPathUnits="userSpaceOnUse"><rect x="70" y="236" width="0" height="28"><animate attributeName="width" from="0" to="310" dur="0.9s" begin="5.1s" fill="freeze" /></rect></clipPath>
+    <clipPath id="line6" clipPathUnits="userSpaceOnUse"><rect x="70" y="266" width="0" height="28"><animate attributeName="width" from="0" to="850" dur="1.7s" begin="6.1s" fill="freeze" /></rect></clipPath>
+    <style>
+      .term { font: 500 18px ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; fill: #e2e8f0; letter-spacing: 0; }
+      .prompt { fill: #38bdf8; font-weight: 700; }
+      .cmd { fill: #f8fafc; }
+      .out { fill: #cbd5e1; }
+      .muted { fill: #94a3b8; }
+      .ok { fill: #34d399; }
+      .scan { animation: scan 5s linear infinite; }
+      .pulse { animation: pulse 3s ease-in-out infinite; }
+      @keyframes scan { 0% { transform: translateY(-120px); opacity: 0; } 18% { opacity: 0.32; } 82% { opacity: 0.18; } 100% { transform: translateY(250px); opacity: 0; } }
+      @keyframes pulse { 0%, 100% { opacity: 0.45; } 50% { opacity: 1; } }
+    </style>
+  </defs>
+
+  <rect width="980" height="330" rx="24" fill="url(#bg)" />
+  <rect width="980" height="330" rx="24" fill="url(#grid)" />
+  <circle cx="160" cy="58" r="180" fill="url(#glow)" />
+  <circle cx="858" cy="286" r="180" fill="#f97316" opacity="0.08" />
+  <rect x="22" y="22" width="936" height="286" rx="20" fill="#020617" opacity="0.82" stroke="url(#border)" stroke-width="2" />
+  <rect x="22" y="22" width="936" height="42" rx="20" fill="#0f172a" stroke="#334155" />
+  <path d="M22 64 H958" stroke="#334155" />
+
+  <circle cx="48" cy="43" r="6" fill="#f87171" />
+  <circle cx="70" cy="43" r="6" fill="#fbbf24" />
+  <circle cx="92" cy="43" r="6" fill="#34d399" />
+  <text x="490" y="49" text-anchor="middle" class="term muted" font-size="14">operator-profile.sh</text>
+  <text x="870" y="49" class="term ok" font-size="14">LIVE</text>
+  <circle class="pulse" cx="928" cy="43" r="5" fill="#34d399" />
+
+  <rect class="scan" x="24" y="80" width="932" height="56" fill="#38bdf8" opacity="0.14" />
+
+  <g clip-path="url(#line1)">
+    <text x="70" y="112" class="term"><tspan class="prompt">$</tspan><tspan class="cmd"> whoami</tspan></text>
+  </g>
+  <g clip-path="url(#line2)">
+    <text x="70" y="142" class="term out">Senior Linux / DevOps / Platform Engineer</text>
+  </g>
+
+  <g clip-path="url(#line3)">
+    <text x="70" y="184" class="term"><tspan class="prompt">$</tspan><tspan class="cmd"> mission</tspan></text>
+  </g>
+  <g clip-path="url(#line4)">
+    <text x="70" y="214" class="term out">Turn complex infrastructure into repeatable, observable, recoverable platforms.</text>
+  </g>
+
+  <g clip-path="url(#line5)">
+    <text x="70" y="256" class="term"><tspan class="prompt">$</tspan><tspan class="cmd"> current_interests</tspan></text>
+  </g>
+  <g clip-path="url(#line6)">
+    <text x="70" y="286" class="term out">automation, network security, object storage, build platforms, practical AI</text>
+  </g>
+
+  <rect x="866" y="270" width="11" height="22" rx="2" fill="#38bdf8">
+    <animate attributeName="opacity" values="0;0;1;0;1;0" keyTimes="0;0.84;0.88;0.92;0.96;1" dur="8.6s" repeatCount="indefinite" />
+  </rect>
+</svg>
