@@ -1,83 +1,99 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 330" role="img" aria-labelledby="title desc">
-  <title id="title">Animated operator terminal</title>
-  <desc id="desc">Terminal-style card showing whoami, mission, and current interests for Simon Oakes.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 360" role="img" aria-labelledby="title desc">
+  <title id="title">Operator profile card</title>
+  <desc id="desc">Professional profile card showing role, mission, and current interests for Simon Oakes.</desc>
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#020617" />
-      <stop offset="0.5" stop-color="#0f172a" />
+      <stop offset="0.58" stop-color="#0f172a" />
       <stop offset="1" stop-color="#111827" />
     </linearGradient>
-    <linearGradient id="border" x1="0" y1="0" x2="1" y2="0">
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0" stop-color="#38bdf8" />
-      <stop offset="0.5" stop-color="#8b5cf6" />
+      <stop offset="0.52" stop-color="#8b5cf6" />
       <stop offset="1" stop-color="#f97316" />
     </linearGradient>
-    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
-      <stop offset="0" stop-color="#38bdf8" stop-opacity="0.28" />
+    <radialGradient id="glowBlue" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#38bdf8" stop-opacity="0.22" />
       <stop offset="1" stop-color="#38bdf8" stop-opacity="0" />
     </radialGradient>
-    <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse">
-      <path d="M 34 0 L 0 0 0 34" fill="none" stroke="#94a3b8" stroke-width="0.6" opacity="0.12" />
-    </pattern>
-    <clipPath id="line1" clipPathUnits="userSpaceOnUse"><rect x="70" y="92" width="0" height="28"><animate attributeName="width" from="0" to="220" dur="0.7s" begin="0.3s" fill="freeze" /></rect></clipPath>
-    <clipPath id="line2" clipPathUnits="userSpaceOnUse"><rect x="70" y="122" width="0" height="28"><animate attributeName="width" from="0" to="520" dur="1.1s" begin="1.1s" fill="freeze" /></rect></clipPath>
-    <clipPath id="line3" clipPathUnits="userSpaceOnUse"><rect x="70" y="164" width="0" height="28"><animate attributeName="width" from="0" to="220" dur="0.8s" begin="2.4s" fill="freeze" /></rect></clipPath>
-    <clipPath id="line4" clipPathUnits="userSpaceOnUse"><rect x="70" y="194" width="0" height="28"><animate attributeName="width" from="0" to="820" dur="1.6s" begin="3.3s" fill="freeze" /></rect></clipPath>
-    <clipPath id="line5" clipPathUnits="userSpaceOnUse"><rect x="70" y="236" width="0" height="28"><animate attributeName="width" from="0" to="310" dur="0.9s" begin="5.1s" fill="freeze" /></rect></clipPath>
-    <clipPath id="line6" clipPathUnits="userSpaceOnUse"><rect x="70" y="266" width="0" height="28"><animate attributeName="width" from="0" to="850" dur="1.7s" begin="6.1s" fill="freeze" /></rect></clipPath>
+    <radialGradient id="glowOrange" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#f97316" stop-opacity="0.16" />
+      <stop offset="1" stop-color="#f97316" stop-opacity="0" />
+    </radialGradient>
+    <filter id="shadow" x="-10%" y="-12%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000000" flood-opacity="0.36" />
+    </filter>
     <style>
-      .term { font: 500 18px ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; fill: #e2e8f0; letter-spacing: 0; }
-      .prompt { fill: #38bdf8; font-weight: 700; }
-      .cmd { fill: #f8fafc; }
-      .out { fill: #cbd5e1; }
-      .muted { fill: #94a3b8; }
-      .ok { fill: #34d399; }
-      .scan { animation: scan 5s linear infinite; }
-      .pulse { animation: pulse 3s ease-in-out infinite; }
-      @keyframes scan { 0% { transform: translateY(-120px); opacity: 0; } 18% { opacity: 0.32; } 82% { opacity: 0.18; } 100% { transform: translateY(250px); opacity: 0; } }
-      @keyframes pulse { 0%, 100% { opacity: 0.45; } 50% { opacity: 1; } }
+      .eyebrow { font: 700 13px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #38bdf8; letter-spacing: 1.8px; }
+      .title { font: 800 30px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #f8fafc; letter-spacing: 0; }
+      .body { font: 500 18px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #cbd5e1; letter-spacing: 0; }
+      .label { font: 700 14px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #e2e8f0; letter-spacing: 0; }
+      .chip { font: 600 14px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #e5e7eb; letter-spacing: 0; }
+      .mono { font: 600 15px ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; fill: #94a3b8; letter-spacing: 0; }
+      .fade { opacity: 0; transform: translateY(10px); animation: fadeUp 0.7s ease-out forwards; }
+      .line { stroke-dasharray: 620; stroke-dashoffset: 620; animation: draw 1.2s ease-out forwards; }
+      .pulse { animation: pulse 3s ease-in-out infinite; transform-origin: center; }
+      .delay1 { animation-delay: 0.15s; }
+      .delay2 { animation-delay: 0.35s; }
+      .delay3 { animation-delay: 0.55s; }
+      .delay4 { animation-delay: 0.75s; }
+      .delay5 { animation-delay: 0.95s; }
+      @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+      @keyframes draw { to { stroke-dashoffset: 0; } }
+      @keyframes pulse { 0%, 100% { opacity: 0.38; } 50% { opacity: 0.85; } }
     </style>
   </defs>
 
-  <rect width="980" height="330" rx="24" fill="url(#bg)" />
-  <rect width="980" height="330" rx="24" fill="url(#grid)" />
-  <circle cx="160" cy="58" r="180" fill="url(#glow)" />
-  <circle cx="858" cy="286" r="180" fill="#f97316" opacity="0.08" />
-  <rect x="22" y="22" width="936" height="286" rx="20" fill="#020617" opacity="0.82" stroke="url(#border)" stroke-width="2" />
-  <rect x="22" y="22" width="936" height="42" rx="20" fill="#0f172a" stroke="#334155" />
-  <path d="M22 64 H958" stroke="#334155" />
+  <rect width="980" height="360" rx="30" fill="#020617" />
+  <circle cx="144" cy="64" r="210" fill="url(#glowBlue)" />
+  <circle cx="870" cy="322" r="240" fill="url(#glowOrange)" />
 
-  <circle cx="48" cy="43" r="6" fill="#f87171" />
-  <circle cx="70" cy="43" r="6" fill="#fbbf24" />
-  <circle cx="92" cy="43" r="6" fill="#34d399" />
-  <text x="490" y="49" text-anchor="middle" class="term muted" font-size="14">operator-profile.sh</text>
-  <text x="870" y="49" class="term ok" font-size="14">LIVE</text>
-  <circle class="pulse" cx="928" cy="43" r="5" fill="#34d399" />
-
-  <rect class="scan" x="24" y="80" width="932" height="56" fill="#38bdf8" opacity="0.14" />
-
-  <g clip-path="url(#line1)">
-    <text x="70" y="112" class="term"><tspan class="prompt">$</tspan><tspan class="cmd"> whoami</tspan></text>
-  </g>
-  <g clip-path="url(#line2)">
-    <text x="70" y="142" class="term out">Senior Linux / DevOps / Platform Engineer</text>
+  <g filter="url(#shadow)">
+    <rect x="28" y="28" width="924" height="304" rx="26" fill="url(#panel)" stroke="#334155" />
+    <rect x="28" y="28" width="924" height="4" rx="2" fill="url(#edge)" />
   </g>
 
-  <g clip-path="url(#line3)">
-    <text x="70" y="184" class="term"><tspan class="prompt">$</tspan><tspan class="cmd"> mission</tspan></text>
-  </g>
-  <g clip-path="url(#line4)">
-    <text x="70" y="214" class="term out">Turn complex infrastructure into repeatable, observable, recoverable platforms.</text>
+  <path class="line" d="M76 246 C210 218 274 272 402 240 C544 204 626 202 762 232 C842 250 884 234 920 210" fill="none" stroke="url(#edge)" stroke-width="2" opacity="0.38" />
+  <circle class="pulse" cx="76" cy="246" r="4" fill="#38bdf8" />
+  <circle class="pulse" cx="402" cy="240" r="4" fill="#8b5cf6" />
+  <circle class="pulse" cx="762" cy="232" r="4" fill="#f97316" />
+
+  <g class="fade delay1">
+    <text x="74" y="78" class="eyebrow">OPERATOR PROFILE</text>
+    <text x="74" y="122" class="title">Senior Linux / DevOps / Platform Engineer</text>
   </g>
 
-  <g clip-path="url(#line5)">
-    <text x="70" y="256" class="term"><tspan class="prompt">$</tspan><tspan class="cmd"> current_interests</tspan></text>
-  </g>
-  <g clip-path="url(#line6)">
-    <text x="70" y="286" class="term out">automation, network security, object storage, build platforms, practical AI</text>
+  <g class="fade delay2">
+    <rect x="74" y="154" width="832" height="70" rx="18" fill="#0f172a" stroke="#1e293b" />
+    <text x="96" y="183" class="label">Mission</text>
+    <text x="96" y="208" class="body">Turn complex infrastructure into repeatable, observable, recoverable platforms.</text>
   </g>
 
-  <rect x="866" y="270" width="11" height="22" rx="2" fill="#38bdf8">
-    <animate attributeName="opacity" values="0;0;1;0;1;0" keyTimes="0;0.84;0.88;0.92;0.96;1" dur="8.6s" repeatCount="indefinite" />
-  </rect>
+  <g class="fade delay3">
+    <rect x="74" y="252" width="126" height="32" rx="16" fill="#082f49" stroke="#075985" />
+    <text x="94" y="273" class="chip">automation</text>
+
+    <rect x="214" y="252" width="168" height="32" rx="16" fill="#1e1b4b" stroke="#4c1d95" />
+    <text x="234" y="273" class="chip">network security</text>
+
+    <rect x="396" y="252" width="146" height="32" rx="16" fill="#132f1f" stroke="#166534" />
+    <text x="416" y="273" class="chip">object storage</text>
+
+    <rect x="556" y="252" width="146" height="32" rx="16" fill="#2e1065" stroke="#6d28d9" />
+    <text x="576" y="273" class="chip">build platforms</text>
+
+    <rect x="716" y="252" width="130" height="32" rx="16" fill="#431407" stroke="#c2410c" />
+    <text x="736" y="273" class="chip">practical AI</text>
+  </g>
+
+  <g class="fade delay4">
+    <text x="74" y="306" class="mono">$ whoami</text>
+    <text x="184" y="306" class="mono">profile.ready=true</text>
+  </g>
+
+  <g class="fade delay5">
+    <rect x="748" y="70" width="156" height="34" rx="17" fill="#052e2b" stroke="#0f766e" />
+    <circle cx="773" cy="87" r="5" fill="#34d399" />
+    <text x="790" y="92" class="chip">production-minded</text>
+  </g>
 </svg>
