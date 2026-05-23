@@ -19,7 +19,7 @@
     <td align="center"><strong>25+ years</strong><br />production infrastructure</td>
     <td align="center"><strong>DevOps</strong><br />automation-first delivery</td>
     <td align="center"><strong>Network security</strong><br />BGP, RTBH, threat feeds</td>
-    <td align="center"><strong>Practical AI</strong><br />ops, reporting, tooling</td>
+    <td align="center"><strong>AI</strong><br />ops, reporting, tooling</td>
   </tr>
 </table>
 
@@ -33,7 +33,7 @@ My work sits where infrastructure, automation, networking, storage, security, an
 
 These days I am especially interested in the layer between operations and software: the Go and Python tools, CI/CD workflows, Ansible roles, Terraform plans, AI-assisted workflows, and small internal services that turn repeated human effort into reliable platform behaviour.
 
-I am also actively exploring practical AI in operations: not hype for its own sake, but useful automation, summarisation, reporting, developer support, and internal tools that help engineers understand systems faster and make better decisions.
+I am also actively exploring AI-assisted operations: not hype for its own sake, but useful automation, summarisation, reporting, developer support, and internal tools that help engineers understand systems faster and make better decisions.
 
 <div align="center">
 
@@ -50,7 +50,7 @@ I am also actively exploring practical AI in operations: not hype for its own sa
 | **Systems programming for operators** | Go and Python CLIs that are small, inspectable, automation-friendly, and built around real operational workflows |
 | **Network and service reliability** | BGP-aware routing, VPNs, HAProxy, Postfix, Dovecot, DNS, observability, backups, and high-availability service design |
 | **Modern internal tooling** | Python Flask apps, PowerShell automation, API integrations, web scraping where needed, and AI-assisted reporting workflows |
-| **Practical AI adoption** | Applying AI where it improves operational clarity: summarisation, internal reporting, workflow assistance, and human-in-the-loop automation |
+| **AI adoption** | Applying AI where it improves operational clarity: summarisation, internal reporting, workflow assistance, and human-in-the-loop automation |
 
 ## How I Tend To Help
 
@@ -154,7 +154,7 @@ A few public examples of the kind of tooling I like to build: practical, operato
 - S3-compatible object storage tooling
 - BGP, RTBH, and network-security automation
 - Docker, Kubernetes, and build-platform reliability
-- Practical AI for operations, internal tools, and reporting workflows
+- AI-assisted operations, internal tools, and reporting workflows
 
 ## Engineering Style
 
