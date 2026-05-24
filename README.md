@@ -10,8 +10,8 @@
 [![Terraform](https://img.shields.io/badge/Terraform-7c3aed?style=for-the-badge&logo=terraform&logoColor=white)](#)
 [![Docker](https://img.shields.io/badge/Docker-0ea5e9?style=for-the-badge&logo=docker&logoColor=white)](#)
 [![Kubernetes](https://img.shields.io/badge/Kubernetes-326ce5?style=for-the-badge&logo=kubernetes&logoColor=white)](#)
-[![AI](https://img.shields.io/badge/AI-111827?style=for-the-badge&logo=openai&logoColor=white)](#)
 [![Git](https://img.shields.io/badge/Git-f05032?style=for-the-badge&logo=git&logoColor=white)](#)
+[![AI](https://img.shields.io/badge/AI-111827?style=for-the-badge&logo=openai&logoColor=white)](#)
 
 </div>
 
