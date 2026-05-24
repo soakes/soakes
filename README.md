@@ -11,6 +11,7 @@
 [![Docker](https://img.shields.io/badge/Docker-0ea5e9?style=for-the-badge&logo=docker&logoColor=white)](#)
 [![Kubernetes](https://img.shields.io/badge/Kubernetes-326ce5?style=for-the-badge&logo=kubernetes&logoColor=white)](#)
 [![AI](https://img.shields.io/badge/AI-111827?style=for-the-badge&logo=openai&logoColor=white)](#)
+[![Git](https://img.shields.io/badge/Git-f05032?style=for-the-badge&logo=git&logoColor=white)](#)
 
 </div>
 
@@ -78,38 +79,72 @@ A few public examples of the kind of tooling I like to build: practical, operato
 <table>
   <tr>
     <td width="50%" valign="top">
-      <h3><a href="https://github.com/soakes/blackhole-threats">blackhole-threats</a></h3>
-      <p>RTBH daemon that turns threat feeds into controlled BGP blackhole announcements for network-security automation and threat-response workflows.</p>
-      <p><code>Go</code> <code>BGP</code> <code>GoBGP</code> <code>RTBH</code> <code>threat intelligence</code></p>
+      <h3><a href="https://github.com/soakes/blackhole-threats">blackhole-threats</a> <img src="https://img.shields.io/github/stars/soakes/blackhole-threats?style=flat&label=%E2%98%85&color=ffb800" /></h3>
+      <p>Automates network threat response by turning threat feeds into BGP blackhole announcements in real time.</p>
+      <p>
+        <img src="https://img.shields.io/badge/Go-00ADD8?flat&logo=go&logoColor=white" />
+        <img src="https://img.shields.io/badge/BGP-38BDF8?flat" />
+        <img src="https://img.shields.io/badge/GoBGP-8B5CF6?flat" />
+        <img src="https://img.shields.io/badge/RTBH-EF4444?flat" />
+        <img src="https://img.shields.io/badge/Threat_Intel-F97316?flat" />
+      </p>
     </td>
     <td width="50%" valign="top">
-      <h3><a href="https://github.com/soakes/s3ctl">s3ctl</a></h3>
-      <p>S3 provisioning CLI for bucket creation, scoped IAM credentials, and batch operations across object-storage estates.</p>
-      <p><code>Go</code> <code>S3</code> <code>IAM</code> <code>object storage</code> <code>DevOps</code></p>
+      <h3><a href="https://github.com/soakes/s3ctl">s3ctl</a> <img src="https://img.shields.io/github/stars/soakes/s3ctl?style=flat&label=%E2%98%85&color=ffb800" /></h3>
+      <p>CLI for provisioning S3 buckets, scoped IAM credentials, and batch operations across object-storage estates at scale.</p>
+      <p>
+        <img src="https://img.shields.io/badge/Go-00ADD8?flat&logo=go&logoColor=white" />
+        <img src="https://img.shields.io/badge/S3-F59E0B?flat" />
+        <img src="https://img.shields.io/badge/IAM-10B981?flat" />
+        <img src="https://img.shields.io/badge/Object_Storage-3B82F6?flat" />
+        <img src="https://img.shields.io/badge/DevOps-0D9488?flat" />
+      </p>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <h3><a href="https://github.com/soakes/s3mirror">s3mirror</a></h3>
-      <p>Production-ready mirror utility for S3-compatible endpoints, with parallel transfers, safe deletion controls, logging, and automation-friendly config.</p>
-      <p><code>Python</code> <code>boto3</code> <code>S3</code> <code>CI/CD</code> <code>disaster recovery</code></p>
+      <h3><a href="https://github.com/soakes/s3mirror">s3mirror</a> <img src="https://img.shields.io/github/stars/soakes/s3mirror?style=flat&label=%E2%98%85&color=ffb800" /></h3>
+      <p>Production-ready S3 mirroring with parallel transfers, safe deletion, and automation-friendly config for disaster recovery and data migration.</p>
+      <p>
+        <img src="https://img.shields.io/badge/Python-3776AB?flat&logo=python&logoColor=white" />
+        <img src="https://img.shields.io/badge/boto3-F7B52B?flat" />
+        <img src="https://img.shields.io/badge/S3-F59E0B?flat" />
+        <img src="https://img.shields.io/badge/CI%2FCD-8B5CF6?flat" />
+        <img src="https://img.shields.io/badge/Disaster_Recovery-EF4444?flat" />
+      </p>
     </td>
     <td width="50%" valign="top">
-      <h3><a href="https://github.com/soakes/telegram-message-exporter">telegram-message-exporter</a></h3>
-      <p>Offline recovery and export tool for Telegram on macOS, decrypting local <code>db_sqlite</code> data and exporting to HTML, Markdown, and CSV.</p>
-      <p><code>Python</code> <code>SQLite</code> <code>SQLCipher</code> <code>macOS</code> <code>forensics</code></p>
+      <h3><a href="https://github.com/soakes/telegram-message-exporter">telegram-message-exporter</a> <img src="https://img.shields.io/github/stars/soakes/telegram-message-exporter?style=flat&label=%E2%98%85&color=ffb800" /></h3>
+      <p>Recovers and exports Telegram messages offline on macOS, decrypting local databases to HTML, Markdown, and CSV.</p>
+      <p>
+        <img src="https://img.shields.io/badge/Python-3776AB?flat&logo=python&logoColor=white" />
+        <img src="https://img.shields.io/badge/SQLite-003B57?flat&logo=sqlite&logoColor=white" />
+        <img src="https://img.shields.io/badge/SQLCipher-34D399?flat" />
+        <img src="https://img.shields.io/badge/macOS-333333?flat&logo=apple&logoColor=white" />
+        <img src="https://img.shields.io/badge/Forensics-F97316?flat" />
+      </p>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <h3><a href="https://github.com/soakes/quotai">quotai</a></h3>
-      <p>Small CLI for showing Z.ai quota usage and exact reset windows, packaged like a practical developer/operator utility.</p>
-      <p><code>Python</code> <code>CLI</code> <code>monitoring</code> <code>developer tools</code></p>
+      <h3><a href="https://github.com/soakes/quotai">quotai</a> <img src="https://img.shields.io/github/stars/soakes/quotai?style=flat&label=%E2%98%85&color=ffb800" /></h3>
+      <p>Lightweight CLI for tracking quota usage and reset windows, designed as a daily developer/operator utility.</p>
+      <p>
+        <img src="https://img.shields.io/badge/Python-3776AB?flat&logo=python&logoColor=white" />
+        <img src="https://img.shields.io/badge/CLI-34D399?flat" />
+        <img src="https://img.shields.io/badge/Monitoring-38BDF8?flat" />
+        <img src="https://img.shields.io/badge/Developer_Tools-8B5CF6?flat" />
+      </p>
     </td>
     <td width="50%" valign="top">
       <h3>Built For Operators</h3>
       <p>Small, inspectable tools that work in shells, CI jobs, cron, systemd timers, Ansible workflows, and real incident-response situations.</p>
-      <p><code>automation-friendly</code> <code>documented</code> <code>recoverable</code> <code>production-minded</code></p>
+      <p>
+        <img src="https://img.shields.io/badge/automation--friendly-38BDF8?flat" />
+        <img src="https://img.shields.io/badge/documented-34D399?flat" />
+        <img src="https://img.shields.io/badge/recoverable-F97316?flat" />
+        <img src="https://img.shields.io/badge/production--minded-8B5CF6?flat" />
+      </p>
     </td>
   </tr>
 </table>
@@ -146,15 +181,6 @@ A few public examples of the kind of tooling I like to build: practical, operato
     </td>
   </tr>
 </table>
-
-## Current Focus
-
-- DevOps and platform automation
-- Secure self-hosted and hybrid infrastructure
-- S3-compatible object storage tooling
-- BGP, RTBH, and network-security automation
-- Docker, Kubernetes, and build-platform reliability
-- AI-assisted operations, internal tools, and reporting workflows
 
 ## Engineering Style
 
