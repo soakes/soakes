@@ -79,7 +79,7 @@ A few public examples of the kind of tooling I like to build: practical, operato
 <table>
   <tr>
     <td width="50%" valign="top">
-      <h3><a href="https://github.com/soakes/blackhole-threats">blackhole-threats</a> <img src="https://img.shields.io/github/stars/soakes/blackhole-threats?style=flat&label=%E2%98%85&color=ffb800" /></h3>
+      <h3><a href="https://github.com/soakes/blackhole-threats">blackhole-threats</a> <img src="https://img.shields.io/github/stars/soakes/blackhole-threats?style=flat&label=%E2%98%85&color=ffb800&cacheSeconds=3600" /></h3>
       <p>Automates network threat response by turning threat feeds into BGP blackhole announcements in real time.</p>
       <p>
         <img src="https://img.shields.io/badge/Go-00ADD8?flat&logo=go&logoColor=white" />
