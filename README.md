@@ -127,23 +127,25 @@ A few public examples of the kind of tooling I like to build: practical, operato
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <h3><a href="https://github.com/soakes/quotai">quotai</a> <img src="https://img.shields.io/github/stars/soakes/quotai?style=flat&label=%E2%98%85&color=ffb800" /></h3>
-      <p>Lightweight CLI for tracking quota usage and reset windows, designed as a daily developer/operator utility.</p>
+      <h3><a href="https://github.com/netspeedy/zquota">zquota</a> <img src="https://img.shields.io/github/stars/netspeedy/zquota?style=flat&label=%E2%98%85&color=ffb800" /></h3>
+      <p>Fast, zero-dependency terminal CLI for Z.ai quota usage, remaining capacity, and exact rolling reset times.</p>
       <p>
         <img src="https://img.shields.io/badge/Python-3776AB?flat&logo=python&logoColor=white" />
         <img src="https://img.shields.io/badge/CLI-34D399?flat" />
-        <img src="https://img.shields.io/badge/Monitoring-38BDF8?flat" />
-        <img src="https://img.shields.io/badge/Developer_Tools-8B5CF6?flat" />
+        <img src="https://img.shields.io/badge/Z.ai-38BDF8?flat" />
+        <img src="https://img.shields.io/badge/Quota_Monitoring-8B5CF6?flat" />
+        <img src="https://img.shields.io/badge/Zero_Deps-10B981?flat" />
       </p>
     </td>
     <td width="50%" valign="top">
-      <h3>Built For Operators</h3>
-      <p>Small, inspectable tools that work in shells, CI jobs, cron, systemd timers, Ansible workflows, and real incident-response situations.</p>
+      <h3><a href="https://github.com/netspeedy/homebrew-zquota">homebrew-zquota</a> <img src="https://img.shields.io/github/stars/netspeedy/homebrew-zquota?style=flat&label=%E2%98%85&color=ffb800" /></h3>
+      <p>Homebrew tap for installing zquota on macOS and Linux with a simple tap-and-install workflow.</p>
       <p>
-        <img src="https://img.shields.io/badge/automation--friendly-38BDF8?flat" />
-        <img src="https://img.shields.io/badge/documented-34D399?flat" />
-        <img src="https://img.shields.io/badge/recoverable-F97316?flat" />
-        <img src="https://img.shields.io/badge/production--minded-8B5CF6?flat" />
+        <img src="https://img.shields.io/badge/Homebrew-FBB040?flat&logo=homebrew&logoColor=black" />
+        <img src="https://img.shields.io/badge/macOS-333333?flat&logo=apple&logoColor=white" />
+        <img src="https://img.shields.io/badge/Linux-111827?flat&logo=linux&logoColor=white" />
+        <img src="https://img.shields.io/badge/Packaging-38BDF8?flat" />
+        <img src="https://img.shields.io/badge/Developer_Tools-8B5CF6?flat" />
       </p>
     </td>
   </tr>
