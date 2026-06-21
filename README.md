@@ -90,7 +90,7 @@ A few public examples of the kind of tooling I like to build: practical, operato
       </p>
     </td>
     <td width="50%" valign="top">
-      <h3><a href="https://github.com/soakes/s3ctl">s3ctl</a> <img src="https://img.shields.io/github/stars/soakes/s3ctl?style=flat&label=%E2%98%85&color=ffb800" /></h3>
+      <h3><a href="https://github.com/netspeedy/s3ctl">s3ctl</a> <img src="https://img.shields.io/github/stars/netspeedy/s3ctl?style=flat&label=%E2%98%85&color=ffb800" /></h3>
       <p>CLI for provisioning S3 buckets, scoped IAM credentials, and batch operations across object-storage estates at scale.</p>
       <p>
         <img src="https://img.shields.io/badge/Go-00ADD8?flat&logo=go&logoColor=white" />
@@ -103,7 +103,7 @@ A few public examples of the kind of tooling I like to build: practical, operato
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <h3><a href="https://github.com/soakes/s3mirror">s3mirror</a> <img src="https://img.shields.io/github/stars/soakes/s3mirror?style=flat&label=%E2%98%85&color=ffb800" /></h3>
+      <h3><a href="https://github.com/netspeedy/s3mirror">s3mirror</a> <img src="https://img.shields.io/github/stars/netspeedy/s3mirror?style=flat&label=%E2%98%85&color=ffb800" /></h3>
       <p>Production-ready S3 mirroring with parallel transfers, safe deletion, and automation-friendly config for disaster recovery and data migration.</p>
       <p>
         <img src="https://img.shields.io/badge/Python-3776AB?flat&logo=python&logoColor=white" />
