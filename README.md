@@ -79,7 +79,7 @@ A few public examples of the kind of tooling I like to build: practical, operato
 <table>
   <tr>
     <td width="50%" valign="top">
-      <h3><a href="https://github.com/soakes/blackhole-threats">blackhole-threats</a> <img src="https://img.shields.io/github/stars/soakes/blackhole-threats?style=flat&label=%E2%98%85&color=ffb800&cacheSeconds=3600" /></h3>
+      <h3><a href="https://github.com/netspeedy/blackhole-threats">blackhole-threats</a> <img src="https://img.shields.io/github/stars/netspeedy/blackhole-threats?style=flat&label=%E2%98%85&color=ffb800&cacheSeconds=3600" /></h3>
       <p>Automates network threat response by turning threat feeds into BGP blackhole announcements in real time.</p>
       <p>
         <img src="https://img.shields.io/badge/Go-00ADD8?flat&logo=go&logoColor=white" />
@@ -146,6 +146,30 @@ A few public examples of the kind of tooling I like to build: practical, operato
         <img src="https://img.shields.io/badge/Linux-111827?flat&logo=linux&logoColor=white" />
         <img src="https://img.shields.io/badge/Packaging-38BDF8?flat" />
         <img src="https://img.shields.io/badge/Developer_Tools-8B5CF6?flat" />
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/netspeedy/homebrew-s3ctl">homebrew-s3ctl</a> <img src="https://img.shields.io/github/stars/netspeedy/homebrew-s3ctl?style=flat&label=%E2%98%85&color=ffb800" /></h3>
+      <p>Homebrew tap for installing s3ctl with a repeatable path for object-storage provisioning tools on macOS and Linux.</p>
+      <p>
+        <img src="https://img.shields.io/badge/Homebrew-FBB040?flat&logo=homebrew&logoColor=black" />
+        <img src="https://img.shields.io/badge/S3-F59E0B?flat" />
+        <img src="https://img.shields.io/badge/IAM-10B981?flat" />
+        <img src="https://img.shields.io/badge/Packaging-38BDF8?flat" />
+        <img src="https://img.shields.io/badge/Provisioning-8B5CF6?flat" />
+      </p>
+    </td>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/netspeedy/homebrew-s3mirror">homebrew-s3mirror</a> <img src="https://img.shields.io/github/stars/netspeedy/homebrew-s3mirror?style=flat&label=%E2%98%85&color=ffb800" /></h3>
+      <p>Homebrew tap for s3mirror, keeping S3-compatible mirroring and migration workflows easy to install and automate.</p>
+      <p>
+        <img src="https://img.shields.io/badge/Homebrew-FBB040?flat&logo=homebrew&logoColor=black" />
+        <img src="https://img.shields.io/badge/S3-F59E0B?flat" />
+        <img src="https://img.shields.io/badge/Object_Storage-3B82F6?flat" />
+        <img src="https://img.shields.io/badge/Mirroring-10B981?flat" />
+        <img src="https://img.shields.io/badge/Data_Migration-EF4444?flat" />
       </p>
     </td>
   </tr>
