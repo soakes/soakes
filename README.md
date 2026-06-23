@@ -90,30 +90,6 @@ A few public examples of the kind of tooling I like to build: practical, operato
       </p>
     </td>
     <td width="50%" valign="top">
-      <h3><a href="https://github.com/netspeedy/s3ctl">s3ctl</a> <img src="https://img.shields.io/github/stars/netspeedy/s3ctl?style=flat&label=%E2%98%85&color=ffb800" /></h3>
-      <p>CLI for provisioning S3 buckets, scoped IAM credentials, and batch operations across object-storage estates at scale.</p>
-      <p>
-        <img src="https://img.shields.io/badge/Go-00ADD8?flat&logo=go&logoColor=white" />
-        <img src="https://img.shields.io/badge/S3-F59E0B?flat" />
-        <img src="https://img.shields.io/badge/IAM-10B981?flat" />
-        <img src="https://img.shields.io/badge/Object_Storage-3B82F6?flat" />
-        <img src="https://img.shields.io/badge/DevOps-0D9488?flat" />
-      </p>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h3><a href="https://github.com/netspeedy/s3mirror">s3mirror</a> <img src="https://img.shields.io/github/stars/netspeedy/s3mirror?style=flat&label=%E2%98%85&color=ffb800" /></h3>
-      <p>Production-ready S3 mirroring with parallel transfers, safe deletion, and automation-friendly config for disaster recovery and data migration.</p>
-      <p>
-        <img src="https://img.shields.io/badge/Python-3776AB?flat&logo=python&logoColor=white" />
-        <img src="https://img.shields.io/badge/boto3-F7B52B?flat" />
-        <img src="https://img.shields.io/badge/S3-F59E0B?flat" />
-        <img src="https://img.shields.io/badge/CI%2FCD-8B5CF6?flat" />
-        <img src="https://img.shields.io/badge/Disaster_Recovery-EF4444?flat" />
-      </p>
-    </td>
-    <td width="50%" valign="top">
       <h3><a href="https://github.com/soakes/telegram-message-exporter">telegram-message-exporter</a> <img src="https://img.shields.io/github/stars/soakes/telegram-message-exporter?style=flat&label=%E2%98%85&color=ffb800" /></h3>
       <p>Recovers and exports Telegram messages offline on macOS, decrypting local databases to HTML, Markdown, and CSV.</p>
       <p>
@@ -127,13 +103,61 @@ A few public examples of the kind of tooling I like to build: practical, operato
   </tr>
   <tr>
     <td width="50%" valign="top">
+      <h3><a href="https://github.com/netspeedy/s3ctl">s3ctl</a> <img src="https://img.shields.io/github/stars/netspeedy/s3ctl?style=flat&label=%E2%98%85&color=ffb800" /></h3>
+      <p>CLI for provisioning S3 buckets, scoped IAM credentials, and batch operations across object-storage estates at scale.</p>
+      <p>
+        <img src="https://img.shields.io/badge/Go-00ADD8?flat&logo=go&logoColor=white" />
+        <img src="https://img.shields.io/badge/S3-F59E0B?flat" />
+        <img src="https://img.shields.io/badge/IAM-10B981?flat" />
+        <img src="https://img.shields.io/badge/Homebrew-FBB040?flat&logo=homebrew&logoColor=black" />
+        <img src="https://img.shields.io/badge/Provisioning-8B5CF6?flat" />
+      </p>
+    </td>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/netspeedy/homebrew-s3ctl">homebrew-s3ctl</a> <img src="https://img.shields.io/github/stars/netspeedy/homebrew-s3ctl?style=flat&label=%E2%98%85&color=ffb800" /></h3>
+      <p>Homebrew tap for installing s3ctl with a repeatable path for object-storage provisioning tools on macOS and Linux.</p>
+      <p>
+        <img src="https://img.shields.io/badge/Homebrew-FBB040?flat&logo=homebrew&logoColor=black" />
+        <img src="https://img.shields.io/badge/S3-F59E0B?flat" />
+        <img src="https://img.shields.io/badge/IAM-10B981?flat" />
+        <img src="https://img.shields.io/badge/Packaging-38BDF8?flat" />
+        <img src="https://img.shields.io/badge/Provisioning-8B5CF6?flat" />
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/netspeedy/s3mirror">s3mirror</a> <img src="https://img.shields.io/github/stars/netspeedy/s3mirror?style=flat&label=%E2%98%85&color=ffb800" /></h3>
+      <p>Production-ready S3 mirroring with parallel transfers, safe deletion, and automation-friendly config for disaster recovery and data migration.</p>
+      <p>
+        <img src="https://img.shields.io/badge/Python-3776AB?flat&logo=python&logoColor=white" />
+        <img src="https://img.shields.io/badge/boto3-F7B52B?flat" />
+        <img src="https://img.shields.io/badge/S3-F59E0B?flat" />
+        <img src="https://img.shields.io/badge/Homebrew-FBB040?flat&logo=homebrew&logoColor=black" />
+        <img src="https://img.shields.io/badge/Disaster_Recovery-EF4444?flat" />
+      </p>
+    </td>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/netspeedy/homebrew-s3mirror">homebrew-s3mirror</a> <img src="https://img.shields.io/github/stars/netspeedy/homebrew-s3mirror?style=flat&label=%E2%98%85&color=ffb800" /></h3>
+      <p>Homebrew tap for s3mirror, keeping S3-compatible mirroring and migration workflows easy to install and automate.</p>
+      <p>
+        <img src="https://img.shields.io/badge/Homebrew-FBB040?flat&logo=homebrew&logoColor=black" />
+        <img src="https://img.shields.io/badge/S3-F59E0B?flat" />
+        <img src="https://img.shields.io/badge/Object_Storage-3B82F6?flat" />
+        <img src="https://img.shields.io/badge/Mirroring-10B981?flat" />
+        <img src="https://img.shields.io/badge/Data_Migration-EF4444?flat" />
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
       <h3><a href="https://github.com/netspeedy/zquota">zquota</a> <img src="https://img.shields.io/github/stars/netspeedy/zquota?style=flat&label=%E2%98%85&color=ffb800" /></h3>
       <p>Fast, zero-dependency terminal CLI for Z.ai quota usage, remaining capacity, and exact rolling reset times.</p>
       <p>
         <img src="https://img.shields.io/badge/Python-3776AB?flat&logo=python&logoColor=white" />
         <img src="https://img.shields.io/badge/CLI-34D399?flat" />
         <img src="https://img.shields.io/badge/Z.ai-38BDF8?flat" />
-        <img src="https://img.shields.io/badge/Quota_Monitoring-8B5CF6?flat" />
+        <img src="https://img.shields.io/badge/Homebrew-FBB040?flat&logo=homebrew&logoColor=black" />
         <img src="https://img.shields.io/badge/Zero_Deps-10B981?flat" />
       </p>
     </td>
@@ -146,30 +170,6 @@ A few public examples of the kind of tooling I like to build: practical, operato
         <img src="https://img.shields.io/badge/Linux-111827?flat&logo=linux&logoColor=white" />
         <img src="https://img.shields.io/badge/Packaging-38BDF8?flat" />
         <img src="https://img.shields.io/badge/Developer_Tools-8B5CF6?flat" />
-      </p>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h3><a href="https://github.com/netspeedy/homebrew-s3ctl">homebrew-s3ctl</a> <img src="https://img.shields.io/github/stars/netspeedy/homebrew-s3ctl?style=flat&label=%E2%98%85&color=ffb800" /></h3>
-      <p>Homebrew tap for installing s3ctl with a repeatable path for object-storage provisioning tools on macOS and Linux.</p>
-      <p>
-        <img src="https://img.shields.io/badge/Homebrew-FBB040?flat&logo=homebrew&logoColor=black" />
-        <img src="https://img.shields.io/badge/S3-F59E0B?flat" />
-        <img src="https://img.shields.io/badge/IAM-10B981?flat" />
-        <img src="https://img.shields.io/badge/Packaging-38BDF8?flat" />
-        <img src="https://img.shields.io/badge/Provisioning-8B5CF6?flat" />
-      </p>
-    </td>
-    <td width="50%" valign="top">
-      <h3><a href="https://github.com/netspeedy/homebrew-s3mirror">homebrew-s3mirror</a> <img src="https://img.shields.io/github/stars/netspeedy/homebrew-s3mirror?style=flat&label=%E2%98%85&color=ffb800" /></h3>
-      <p>Homebrew tap for s3mirror, keeping S3-compatible mirroring and migration workflows easy to install and automate.</p>
-      <p>
-        <img src="https://img.shields.io/badge/Homebrew-FBB040?flat&logo=homebrew&logoColor=black" />
-        <img src="https://img.shields.io/badge/S3-F59E0B?flat" />
-        <img src="https://img.shields.io/badge/Object_Storage-3B82F6?flat" />
-        <img src="https://img.shields.io/badge/Mirroring-10B981?flat" />
-        <img src="https://img.shields.io/badge/Data_Migration-EF4444?flat" />
       </p>
     </td>
   </tr>
