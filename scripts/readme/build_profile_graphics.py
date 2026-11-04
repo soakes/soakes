@@ -10,7 +10,7 @@
     profile-journey.svg   ten roles since 2000 as stops on one route over the Earth's horizon
     profile-bring.svg     the four oakes.me.uk stats drawn to scale, and the six things I bring
     profile-stack.svg     the oakes.me.uk Stack orbit, with the whole toolbox on the Earth below
-    profile-style.svg     the five engineering principles, closing the page above the Earth
+    profile-style.svg     the five engineering principles as stages on one pipeline
     project-<name>.svg    a card for each public project, which the README links to its repo
 
 They share the oakes.me.uk colours, a seeded starfield and, bar the stats and the cards, the
@@ -1641,70 +1641,107 @@ PRINCIPLES = [
 ]
 
 
-def build_style() -> str:
-    """The five principles as the page's closing statement, set large and centred above the
-    Earth with London lit, so the profile ends where the banner starts. Each line fades up in
-    turn; "Keep production calm." takes the site's cyan-to-amber headline treatment and swash,
-    and a recap underneath reads like the banner's playbook run. At rest every line is lit."""
-    size, step, top = 29.0, 46.0, 128.0
-    hero = "Keep production calm."
-    label = "ENGINEERING STYLE"
-    pill_w = mono_width(len(label), 11.5, 1.5) - 1.5 + 40
-    els = [*pill(40, label, x=WIDTH / 2 - pill_w / 2)]
-    css = (
-        ".ln{animation:ln 9s ease-out infinite both}"
-        "@keyframes ln{0%{opacity:.15}5%{opacity:1}90%{opacity:1}100%{opacity:.15}}"
+# One icon and one word per principle; the icons are on the capability icons' 24px grid.
+PRINCIPLE_ICONS = {
+    "Automate the repeatable.": GLYPHS["cycle"],
+    "Document the surprising.": "M6.5 3h7.5l4 4v14h-11.5ZM14 3v4h4M9.5 12h5M9.5 16h5",
+    "Design for recovery.": "M12 4a8 8 0 1 0 0 16 8 8 0 0 0 0-16ZM12 8.6a3.4 3.4 0 1 0 0 6.8 3.4 "
+    "3.4 0 0 0 0-6.8ZM6.4 6.4l3.2 3.2M17.6 6.4l-3.2 3.2M6.4 17.6l3.2-3.2M17.6 17.6l-3.2-3.2",
+    "Keep production calm.": "M2.5 8.5c2.4-3 4.6-3 7 0s4.6 3 7 0c1.6-1.9 3.2-2.3 5-1.2M2.5 14.5c3-1.4 "
+    "6.4-1.4 9.5 0s6.6 1.4 9.5 0M2.5 19.5h19",
+    "Make the next fix easier than the last one.": "M3 20h5v-5h5v-5h5V5h3",
+}
+PRINCIPLE_WORDS = ["AUTOMATE", "DOCUMENT", "RECOVER", "STAY CALM", "IMPROVE"]
+STYLE_LEAD = "The habits behind every playbook, pipeline and tool on this page."
+
+
+def principle_icon(cx: float, cy: float, key: str, size: float) -> str:
+    s = size / 24
+    return (
+        f'<path transform="translate({num(cx - 12 * s)} {num(cy - 12 * s)}) scale({s:.3f})" '
+        f'd="{PRINCIPLE_ICONS[key]}" fill="none" stroke="{CYAN}" stroke-width="{1.7 / s:.2f}" '
+        'stroke-linecap="round" stroke-linejoin="round" />'
     )
-    hero_w = text_width(hero, size, 750, -0.6)
-    for i, line in enumerate(PRINCIPLES):
-        y = top + i * step
-        if text_width(line, size, 750, -0.6) > WIDTH - 2 * 180:
-            raise SystemExit(f"'{line}' is too wide to centre")
-        fill = "url(#heroG)" if line == hero else "url(#nameG)"
+
+
+def build_style() -> str:
+    """The five principles as stages on one pipeline, each with its icon and a one-word label,
+    and a signal running left to right that rings each stage as it passes. A recap underneath
+    reads like the banner's playbook run. At rest the signal sits part way along."""
+    height, loop, travel = 440.0, 7.0, 4.2
+    x0, x1, ty = 96.0, WIDTH - 96.0, 266.0
+    xs = [x0 + 64 + i * (x1 - x0 - 128) / 4 for i in range(5)]
+    length = x1 - x0
+    els = [
+        *pill(44, "ENGINEERING STYLE"),
+        f'  <text class="sans" x="{num(COPY_X)}" y="{num(124)}" font-size="40" font-weight="800" '
+        f'letter-spacing="-1.2" text-anchor="start"><tspan fill="url(#nameG)">How I work, </tspan>'
+        '<tspan fill="url(#roleG)">in five lines.</tspan></text>',
+        f'  <text class="sans" x="{num(COPY_X)}" y="{num(162)}" font-size="16" '
+        f'fill="{INK_2}">{esc(STYLE_LEAD)}</text>',
+        f'  <path d="M{num(x0)} {num(ty)}H{num(x1)}" stroke="url(#track)" stroke-width="1.6" '
+        'stroke-opacity="0.6" />',
+        f'  <path class="trip" d="M{num(x0)} {num(ty)}H{num(x1)}" stroke="{CYAN_2}" '
+        f'stroke-width="3" stroke-linecap="round" stroke-dasharray="26 {num(length + 26)}" '
+        f'stroke-dashoffset="{num(-length * 0.55)}" />',
+    ]
+    arrive = travel / loop * 100
+    css = [
+        f".trip{{animation:trip {loop}s linear infinite}}"
+        f"@keyframes trip{{0%{{stroke-dashoffset:26;opacity:1}}{arrive:.1f}%{{stroke-dashoffset:"
+        f"{num(-length)};opacity:1}}{arrive + 0.1:.1f}%,100%{{stroke-dashoffset:{num(-length)};"
+        "opacity:0}}",
+        ".ring{opacity:0;transform-box:fill-box;transform-origin:center;"
+        f"animation:ring {loop}s ease-out infinite}}"
+        "@keyframes ring{0%{opacity:.85;transform:scale(1)}18%{opacity:0;transform:scale(1.7)}"
+        "100%{opacity:0}}",
+    ]
+    for i, (x, line) in enumerate(zip(xs, PRINCIPLES)):
+        when = (x - x0) / length * travel
+        lines = wrap(line, 16.5, 196, 600)
         els.append(
-            f'  <text class="sans ln" x="{num(WIDTH / 2)}" y="{num(y)}" text-anchor="middle" '
-            f'font-size="{num(size)}" font-weight="750" letter-spacing="-0.6" fill="{fill}" '
-            f'style="animation-delay:{i * 0.35:.2f}s">{esc(line)}</text>'
-        )
-        if line == hero:
-            sx = WIDTH / 2 - hero_w / 2
-            els.append(
-                f'  <path d="M{num(sx + 4)} {num(y + 11)}q{num(hero_w / 2)} -6.5 '
-                f'{num(hero_w - 8)} -1.5" fill="none" stroke="url(#uline)" stroke-width="2.6" '
-                'stroke-linecap="round" />'
+            f'  <circle cx="{num(x)}" cy="{num(ty)}" r="46" fill="url(#nodeGlow)" />'
+            f'<circle class="ring" cx="{num(x)}" cy="{num(ty)}" r="30" fill="none" stroke="{CYAN}" '
+            f'stroke-width="1.2" style="animation-delay:{when:.2f}s" />'
+            f'<circle cx="{num(x)}" cy="{num(ty)}" r="30" fill="#0E1726" stroke="{TERM_EDGE}" '
+            'stroke-width="1.4" />'
+            + principle_icon(x, ty, line, 30)
+            + f'<text class="mono" x="{num(x)}" y="{num(ty - 48)}" text-anchor="middle" '
+            f'font-size="11" letter-spacing="1.6" fill="{CYAN_2}">{PRINCIPLE_WORDS[i]}</text>'
+            + "".join(
+                f'<text class="sans" x="{num(x)}" y="{num(ty + 62 + 22 * k)}" '
+                f'text-anchor="middle" font-size="16.5" font-weight="600" fill="{INK}">'
+                f"{esc(t)}</text>"
+                for k, t in enumerate(lines)
             )
-    recap_y = top + len(PRINCIPLES) * step + 2
+        )
     els.append(
-        f'  <text class="mono" x="{num(WIDTH / 2)}" y="{num(recap_y)}" font-size="12.5" '
+        f'  <text class="mono" x="{num(WIDTH / 2)}" y="{num(404)}" font-size="12.5" '
         f'text-anchor="middle" xml:space="preserve"><tspan fill="{INK_3}">principles : </tspan>'
         f'<tspan fill="{GREEN}">ok=5</tspan><tspan fill="{INK_3}">  changed=0  failed=0</tspan>'
         "</text>"
     )
-    # The horizon sits well clear of the recap, with London lit above the card's bottom edge.
-    earth = Earth(1500, (600, 500), HORIZON_VIEW)
-    if earth.cy - earth.radius < recap_y + 40:
-        raise SystemExit("the Earth's horizon runs into the engineering style text")
-    height = earth.london[1] + 52
-    text_box = (180.0, 20.0, WIDTH - 180.0, recap_y + 18)
-    g_defs, g_body, g_css = ground(height, [text_box], earth)
+    box = (60.0, 190.0, WIDTH - 60.0, 380.0)
+    g_defs, g_body, g_css = ground(height, [(36, 30, 760, 180), box], glow=box)
     defs = [
         *g_defs,
         *copy_defs(),
         *gradient(
             "linearGradient",
-            f'id="heroG" gradientUnits="userSpaceOnUse" x1="{num(WIDTH / 2 - hero_w / 2)}" '
-            f'y1="0" x2="{num(WIDTH / 2 + hero_w / 2)}" y2="0"',
-            [("0", CYAN_2, ""), ("0.5", "#F4F7FA", ""), ("1", AMBER, "")],
+            f'id="track" gradientUnits="userSpaceOnUse" x1="{num(x0)}" y1="0" x2="{num(x1)}" y2="0"',
+            [("0", CYAN, "0"), ("0.15", CYAN, ""), ("0.85", AMBER, ""), ("1", AMBER, "0")],
         ),
         *gradient(
-            "linearGradient",
-            'id="uline" x1="0" y1="0" x2="1" y2="0"',
-            [("0", AMBER, "0.35"), ("0.5", AMBER, ""), ("1", AMBER, "0.5")],
+            "radialGradient",
+            'id="nodeGlow" cx="0.5" cy="0.5" r="0.5"',
+            [("0", CYAN, "0.22"), ("1", CYAN, "0")],
         ),
     ]
-    desc = "Engineering style, set above the Earth with London lit. " + " ".join(PRINCIPLES)
+    desc = "Engineering style: how I work, in five lines, as stages on one pipeline. " + " ".join(
+        PRINCIPLES
+    )
     title = "Simon Oakes - engineering style"
-    return document(height, title, desc, defs, css + g_css, [*g_body, *els])
+    return document(height, title, desc, defs, "".join(css) + g_css, [*g_body, *els])
 
 
 def main() -> None:
