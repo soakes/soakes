@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/profile-banner.svg" alt="Simon Oakes profile banner" />
+<img src="./assets/profile-banner.svg" width="100%" alt="Simon Oakes, Senior Linux, DevOps and Platform Engineer. UK-based, 25+ years in production. Automation-first infrastructure; production systems that stay calm. A terminal dry-runs the site playbook and reports nothing changed, above the dotted Earth with London lit." />
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=2600&pause=800&color=38BDF8&center=true&vCenter=true&width=900&lines=Automation-first+infrastructure;Linux+%7C+DevOps+%7C+Platform+Engineering;automation+%7C+network+%7C+security+%7C+build+platforms+%7C+AI;Production+systems+that+stay+calm" alt="Animated headline: automation-first infrastructure, Linux DevOps platform engineering, automation, network, security, build platforms, and AI" />
 
@@ -36,199 +36,51 @@ These days I am especially interested in the layer between operations and softwa
 
 I am also actively exploring AI-assisted operations: not hype for its own sake, but useful automation, summarisation, reporting, developer support, and internal tools that help engineers understand systems faster and make better decisions.
 
-<div align="center">
-
-<img src="./assets/operator-terminal.svg" alt="Animated operator terminal showing whoami, mission, and current interests" />
-
-</div>
+<p align="center">
+  <img src="./assets/profile-journey.svg" width="100%" alt="The journey so far: ten roles across ISPs, telecoms, media and platform engineering from 2000 to now, as stops on one route over the Earth. ISP and telecoms foundations from 2000; automation, networks and build platforms from 2011; platforms, automation and AI infrastructure from 2024." />
+</p>
 
 ## What I Bring
 
-| Area | Signal |
-| --- | --- |
-| **25+ years in production infrastructure** | Linux, networking, ISP operations, virtualisation, storage, mail, DNS, monitoring, support escalation, and mentoring |
-| **DevOps and platform engineering** | Ansible, Terraform, Packer, GitHub Actions, GitLab, Jenkins, CI/CD, Docker, Compose, Kubernetes, and automation-first operations |
-| **Systems programming for operators** | Go and Python CLIs that are small, inspectable, automation-friendly, and built around real operational workflows |
-| **Network and service reliability** | BGP-aware routing, VPNs, HAProxy, Postfix, Dovecot, DNS, observability, backups, and high-availability service design |
-| **Modern internal tooling** | Python Flask apps, PowerShell automation, API integrations, web scraping where needed, and AI-assisted reporting workflows |
-| **AI adoption** | Applying AI where it improves operational clarity: summarisation, internal reporting, workflow assistance, and human-in-the-loop automation |
-
-## How I Tend To Help
-
-<table>
-  <tr>
-    <td width="33%" valign="top">
-      <strong>Stabilise</strong><br />
-      Understand the platform, find the real failure modes, and reduce operational noise.
-    </td>
-    <td width="33%" valign="top">
-      <strong>Automate</strong><br />
-      Replace fragile manual steps with code, pipelines, checks, and repeatable workflows.
-    </td>
-    <td width="33%" valign="top">
-      <strong>Modernise</strong><br />
-      Move systems forward without losing sight of reliability, recovery, and the people operating them.
-    </td>
-  </tr>
-</table>
+<p align="center">
+  <img src="./assets/profile-bring.svg" width="100%" alt="What I bring. Twenty-five years, by the numbers: 25+ years in production since 2000, 2,500 VMs under automation, 300+ DNS zones managed and 40+ Ansible roles authored. Stabilise: understand the platform, find the real failure modes and reduce operational noise. Automate: replace fragile manual steps with code, pipelines, checks and repeatable workflows. Modernise: move systems forward without losing reliability, recovery, or the people operating them. Mentor: raise the bar across the engineering function as escalation point, reviewer and teacher. Tool: small Go and Python CLIs that fit shells, CI, cron and systemd. AI-assist: use AI where it improves clarity, in summarisation, reporting and human-in-the-loop operations." />
+</p>
 
 ## Selected Public Work
 
 A few public examples of the kind of tooling I like to build: practical, operator-facing, and designed to solve specific production problems cleanly.
 
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <h3><a href="https://github.com/netspeedy/blackhole-threats">blackhole-threats</a> <img src="https://img.shields.io/github/stars/netspeedy/blackhole-threats?style=flat&label=%E2%98%85&color=ffb800&cacheSeconds=3600" /></h3>
-      <p>Automates network threat response by turning threat feeds into BGP blackhole announcements in real time.</p>
-      <p>
-        <img src="https://img.shields.io/badge/Go-00ADD8?flat&logo=go&logoColor=white" />
-        <img src="https://img.shields.io/badge/BGP-38BDF8?flat" />
-        <img src="https://img.shields.io/badge/GoBGP-8B5CF6?flat" />
-        <img src="https://img.shields.io/badge/RTBH-EF4444?flat" />
-        <img src="https://img.shields.io/badge/Threat_Intel-F97316?flat" />
-      </p>
-    </td>
-    <td width="50%" valign="top">
-      <h3><a href="https://github.com/soakes/telegram-message-exporter">telegram-message-exporter</a> <img src="https://img.shields.io/github/stars/soakes/telegram-message-exporter?style=flat&label=%E2%98%85&color=ffb800" /></h3>
-      <p>Recovers and exports Telegram messages offline on macOS, decrypting local databases to HTML, Markdown, and CSV.</p>
-      <p>
-        <img src="https://img.shields.io/badge/Python-3776AB?flat&logo=python&logoColor=white" />
-        <img src="https://img.shields.io/badge/SQLite-003B57?flat&logo=sqlite&logoColor=white" />
-        <img src="https://img.shields.io/badge/SQLCipher-34D399?flat" />
-        <img src="https://img.shields.io/badge/macOS-333333?flat&logo=apple&logoColor=white" />
-        <img src="https://img.shields.io/badge/Forensics-F97316?flat" />
-      </p>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h3><a href="https://github.com/netspeedy/s3ctl">s3ctl</a> <img src="https://img.shields.io/github/stars/netspeedy/s3ctl?style=flat&label=%E2%98%85&color=ffb800" /></h3>
-      <p>CLI for provisioning S3 buckets, scoped IAM credentials, and batch operations across object-storage estates at scale.</p>
-      <p>
-        <img src="https://img.shields.io/badge/Go-00ADD8?flat&logo=go&logoColor=white" />
-        <img src="https://img.shields.io/badge/S3-F59E0B?flat" />
-        <img src="https://img.shields.io/badge/IAM-10B981?flat" />
-        <img src="https://img.shields.io/badge/Homebrew-FBB040?flat&logo=homebrew&logoColor=black" />
-        <img src="https://img.shields.io/badge/Provisioning-8B5CF6?flat" />
-      </p>
-    </td>
-    <td width="50%" valign="top">
-      <h3><a href="https://github.com/netspeedy/homebrew-s3ctl">homebrew-s3ctl</a> <img src="https://img.shields.io/github/stars/netspeedy/homebrew-s3ctl?style=flat&label=%E2%98%85&color=ffb800" /></h3>
-      <p>Homebrew tap for installing s3ctl with a repeatable path for object-storage provisioning tools on macOS and Linux.</p>
-      <p>
-        <img src="https://img.shields.io/badge/Homebrew-FBB040?flat&logo=homebrew&logoColor=black" />
-        <img src="https://img.shields.io/badge/S3-F59E0B?flat" />
-        <img src="https://img.shields.io/badge/IAM-10B981?flat" />
-        <img src="https://img.shields.io/badge/Packaging-38BDF8?flat" />
-        <img src="https://img.shields.io/badge/Provisioning-8B5CF6?flat" />
-      </p>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h3><a href="https://github.com/netspeedy/s3mirror">s3mirror</a> <img src="https://img.shields.io/github/stars/netspeedy/s3mirror?style=flat&label=%E2%98%85&color=ffb800" /></h3>
-      <p>Production-ready S3 mirroring with parallel transfers, safe deletion, and automation-friendly config for disaster recovery and data migration.</p>
-      <p>
-        <img src="https://img.shields.io/badge/Python-3776AB?flat&logo=python&logoColor=white" />
-        <img src="https://img.shields.io/badge/boto3-F7B52B?flat" />
-        <img src="https://img.shields.io/badge/S3-F59E0B?flat" />
-        <img src="https://img.shields.io/badge/Homebrew-FBB040?flat&logo=homebrew&logoColor=black" />
-        <img src="https://img.shields.io/badge/Disaster_Recovery-EF4444?flat" />
-      </p>
-    </td>
-    <td width="50%" valign="top">
-      <h3><a href="https://github.com/netspeedy/homebrew-s3mirror">homebrew-s3mirror</a> <img src="https://img.shields.io/github/stars/netspeedy/homebrew-s3mirror?style=flat&label=%E2%98%85&color=ffb800" /></h3>
-      <p>Homebrew tap for s3mirror, keeping S3-compatible mirroring and migration workflows easy to install and automate.</p>
-      <p>
-        <img src="https://img.shields.io/badge/Homebrew-FBB040?flat&logo=homebrew&logoColor=black" />
-        <img src="https://img.shields.io/badge/S3-F59E0B?flat" />
-        <img src="https://img.shields.io/badge/Object_Storage-3B82F6?flat" />
-        <img src="https://img.shields.io/badge/Mirroring-10B981?flat" />
-        <img src="https://img.shields.io/badge/Data_Migration-EF4444?flat" />
-      </p>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h3><a href="https://github.com/netspeedy/zquota">zquota</a> <img src="https://img.shields.io/github/stars/netspeedy/zquota?style=flat&label=%E2%98%85&color=ffb800" /></h3>
-      <p>Fast, zero-dependency terminal CLI for Z.ai quota usage, remaining capacity, and exact rolling reset times.</p>
-      <p>
-        <img src="https://img.shields.io/badge/Python-3776AB?flat&logo=python&logoColor=white" />
-        <img src="https://img.shields.io/badge/CLI-34D399?flat" />
-        <img src="https://img.shields.io/badge/Z.ai-38BDF8?flat" />
-        <img src="https://img.shields.io/badge/Homebrew-FBB040?flat&logo=homebrew&logoColor=black" />
-        <img src="https://img.shields.io/badge/Zero_Deps-10B981?flat" />
-      </p>
-    </td>
-    <td width="50%" valign="top">
-      <h3><a href="https://github.com/netspeedy/homebrew-zquota">homebrew-zquota</a> <img src="https://img.shields.io/github/stars/netspeedy/homebrew-zquota?style=flat&label=%E2%98%85&color=ffb800" /></h3>
-      <p>Homebrew tap for installing zquota on macOS and Linux with a simple tap-and-install workflow.</p>
-      <p>
-        <img src="https://img.shields.io/badge/Homebrew-FBB040?flat&logo=homebrew&logoColor=black" />
-        <img src="https://img.shields.io/badge/macOS-333333?flat&logo=apple&logoColor=white" />
-        <img src="https://img.shields.io/badge/Linux-111827?flat&logo=linux&logoColor=white" />
-        <img src="https://img.shields.io/badge/Packaging-38BDF8?flat" />
-        <img src="https://img.shields.io/badge/Developer_Tools-8B5CF6?flat" />
-      </p>
-    </td>
-  </tr>
-</table>
+<p align="center">
+  <a href="https://github.com/netspeedy/blackhole-threats"><img src="./assets/project-blackhole-threats.svg" width="49%" alt="blackhole-threats: network defence automation. Turns threat feeds into BGP blackhole routes through GoBGP. Built in Go; ships as a signed APT repository and a GHCR image." /></a>
+  <a href="https://github.com/soakes/telegram-message-exporter"><img src="./assets/project-telegram-message-exporter.svg" width="49%" alt="telegram-message-exporter: chat recovery. Recovers deleted chats from the encrypted cache Telegram for macOS keeps on disk, entirely offline, and exports HTML, Markdown and CSV." /></a>
+  <a href="https://github.com/netspeedy/s3ctl"><img src="./assets/project-s3ctl.svg" width="49%" alt="s3ctl: S3 provisioning. Provisions S3 buckets, each with its own IAM user and key scoped to that bucket alone. Built in Go; install with brew tap netspeedy/s3ctl, then brew install s3ctl." /></a>
+  <a href="https://github.com/netspeedy/s3mirror"><img src="./assets/project-s3mirror.svg" width="49%" alt="s3mirror: bucket mirroring. Mirrors every bucket between S3-compatible endpoints, copying only new or changed objects. Built in Python; install with brew tap netspeedy/s3mirror, then brew install s3mirror." /></a>
+  <a href="https://github.com/netspeedy/zquota"><img src="./assets/project-zquota.svg" width="49%" alt="zquota: quota monitoring. Shows Z.ai quota use and exactly when each window resets. Built in Python; install with brew tap netspeedy/zquota, then brew install zquota." /></a>
+  <a href="https://github.com/netspeedy/joflux"><img src="./assets/project-joflux.svg" width="49%" alt="joflux: repository migration. Moves a whole GitHub organisation into Forgejo or Codeberg in five stages. Built in Python; install with brew tap netspeedy/joflux, then brew install joflux." /></a>
+</p>
 
-## Operating Principles
+<div align="center">
 
-<table>
-  <tr>
-    <td width="33%" valign="top">
-      <strong>Calm Production</strong><br />
-      Designing infrastructure that is boring for users and clear for operators.
-    </td>
-    <td width="33%" valign="top">
-      <strong>Useful Automation</strong><br />
-      Replacing manual runbooks with tested automation and readable code.
-    </td>
-    <td width="33%" valign="top">
-      <strong>Operator Tooling</strong><br />
-      Building CLIs and services that fit cron, systemd, CI/CD, and Ansible.
-    </td>
-  </tr>
-  <tr>
-    <td width="33%" valign="top">
-      <strong>Platform Clarity</strong><br />
-      Making storage, networking, routing, and services easier to reason about.
-    </td>
-    <td width="33%" valign="top">
-      <strong>Developer Velocity</strong><br />
-      Improving build platforms so engineers can ship without fighting machinery.
-    </td>
-    <td width="33%" valign="top">
-      <strong>Team Lift</strong><br />
-      Mentoring engineers, documenting well, and raising the operational quality bar.
-    </td>
-  </tr>
-</table>
+Each card opens its repository. Homebrew taps for the tools above:
 
-## Engineering Style
+[![homebrew-s3ctl](https://img.shields.io/badge/homebrew--s3ctl-FBB040?style=for-the-badge&logo=homebrew&logoColor=black)](https://github.com/netspeedy/homebrew-s3ctl)
+[![homebrew-s3mirror](https://img.shields.io/badge/homebrew--s3mirror-FBB040?style=for-the-badge&logo=homebrew&logoColor=black)](https://github.com/netspeedy/homebrew-s3mirror)
+[![homebrew-zquota](https://img.shields.io/badge/homebrew--zquota-FBB040?style=for-the-badge&logo=homebrew&logoColor=black)](https://github.com/netspeedy/homebrew-zquota)
+[![homebrew-joflux](https://img.shields.io/badge/homebrew--joflux-FBB040?style=for-the-badge&logo=homebrew&logoColor=black)](https://github.com/netspeedy/homebrew-joflux)
 
-```text
-Automate the repeatable.
-Document the surprising.
-Design for recovery.
-Keep production calm.
-Make the next fix easier than the last one.
-```
+</div>
 
 ## Core Toolbox
 
-```text
-Linux        Debian, Ubuntu, Red Hat-family systems, macOS, Windows Server
-Automation   Ansible, Terraform, Packer, GitHub Actions, GitLab, Jenkins
-Runtime      Docker, Docker Compose, Kubernetes, systemd, HAProxy
-Code         Go, Python, Bash, PowerShell, Flask, API integrations
-Network      DNS, BGP, OSPF, VPNs, VLANs, NAT, routing, firewalls
-Services     Postfix, Dovecot, Nginx, Apache, Bind, monitoring, backup
-Platforms    Proxmox, VMware, XenServer, Nutanix, KVM, NetApp, Pure, Nimble
-```
+<p align="center">
+  <img src="./assets/profile-stack.svg" width="100%" alt="The stack I reach for, battle-tested. Linux: Debian, Ubuntu, Red Hat-family systems, macOS, Windows Server, systemd. Automation: Ansible, Terraform, Packer, Puppet, Bash, PowerShell. CI/CD: GitHub Actions, GitLab CI, Jenkins, Nexus, SonarQube. Runtime: Docker, Docker Compose, Kubernetes, HAProxy, Nginx. Code: Go, Python, Flask, API integrations. Network: BGP, OSPF, DNS, VLANs, NAT, WireGuard, IPsec, MikroTik, Cisco, RTBH. Services: Postfix, Dovecot, BIND, Apache, FreeRADIUS, monitoring, backup. Platforms: Proxmox, VMware, XenServer, KVM, Nutanix, NetApp, Pure Storage, Nimble. AI: NVIDIA DGX Spark, vLLM, LiteLLM, Hugging Face, Azure OpenAI. In the orbit, Linux at the core; Ansible, Docker, Terraform, Kubernetes, Python and Go on the inner ring; Debian, GitHub Actions, Ubuntu, Packer, Red Hat, GitLab CI, Bash, Proxmox, Puppet, Jenkins, Nutanix and Nginx on the outer ring." />
+</p>
+
+## Engineering Style
+
+<p align="center">
+  <img src="./assets/profile-principles.svg" width="100%" alt="Engineering style: how I work, in five lines, as stages on one pipeline. Automate the repeatable. Document the surprising. Design for recovery. Keep production calm. Make the next fix easier than the last one." />
+</p>
 
 ## GitHub
 
