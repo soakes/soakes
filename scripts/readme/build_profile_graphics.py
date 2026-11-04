@@ -10,7 +10,7 @@
     profile-journey.svg   ten roles since 2000 as stops on one route over the Earth's horizon
     profile-bring.svg     the four oakes.me.uk stats drawn to scale, and the six things I bring
     profile-stack.svg     the oakes.me.uk Stack orbit, with the whole toolbox on the Earth below
-    profile-style.svg     the five engineering principles as stages on one pipeline
+    profile-principles.svg  the five engineering principles as stages on one pipeline
     project-<name>.svg    a card for each public project, which the README links to its repo
 
 They share the oakes.me.uk colours, a seeded starfield and, bar the stats and the cards, the
@@ -1750,7 +1750,7 @@ def main() -> None:
         ("profile-journey.svg", build_journey),
         ("profile-bring.svg", build_bring),
         ("profile-stack.svg", build_stack),
-        ("profile-style.svg", build_style),
+        ("profile-principles.svg", build_style),
     ]
     for project in PROJECTS:
         graphics.append((f"project-{project['name']}.svg", lambda p=project: build_project(p)))
