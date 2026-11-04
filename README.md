@@ -79,7 +79,7 @@ Each card opens its repository. Homebrew taps for the tools above:
 ## Engineering Style
 
 <p align="center">
-  <img src="./assets/profile-style.svg" width="100%" alt="Engineering style, set above the Earth with London lit. Automate the repeatable. Document the surprising. Design for recovery. Keep production calm. Make the next fix easier than the last one." />
+  <img src="./assets/profile-style.svg" width="100%" alt="Engineering style: how I work, in five lines, as stages on one pipeline. Automate the repeatable. Document the surprising. Design for recovery. Keep production calm. Make the next fix easier than the last one." />
 </p>
 
 ## GitHub
