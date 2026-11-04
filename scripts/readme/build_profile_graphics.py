@@ -1646,7 +1646,7 @@ def build_style() -> str:
     Earth with London lit, so the profile ends where the banner starts. Each line fades up in
     turn; "Keep production calm." takes the site's cyan-to-amber headline treatment and swash,
     and a recap underneath reads like the banner's playbook run. At rest every line is lit."""
-    height, size, step, top = 500.0, 29.0, 46.0, 128.0
+    size, step, top = 29.0, 46.0, 128.0
     hero = "Keep production calm."
     label = "ENGINEERING STYLE"
     pill_w = mono_width(len(label), 11.5, 1.5) - 1.5 + 40
@@ -1680,8 +1680,13 @@ def build_style() -> str:
         f'<tspan fill="{GREEN}">ok=5</tspan><tspan fill="{INK_3}">  changed=0  failed=0</tspan>'
         "</text>"
     )
+    # The horizon sits well clear of the recap, with London lit above the card's bottom edge.
+    earth = Earth(1500, (600, 500), HORIZON_VIEW)
+    if earth.cy - earth.radius < recap_y + 40:
+        raise SystemExit("the Earth's horizon runs into the engineering style text")
+    height = earth.london[1] + 52
     text_box = (180.0, 20.0, WIDTH - 180.0, recap_y + 18)
-    g_defs, g_body, g_css = ground(height, [text_box], Earth(1500, (600, 448), HORIZON_VIEW))
+    g_defs, g_body, g_css = ground(height, [text_box], earth)
     defs = [
         *g_defs,
         *copy_defs(),
